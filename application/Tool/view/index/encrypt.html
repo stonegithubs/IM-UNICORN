@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>工具类</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/Tool/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="/Tool/styles/style.css"  media="all">
+</head>
+<body>
+{include file="common/nav" /}
+<div class="layui-content">
+    <div class="layui-row">
+        <div class="layui-col-xs12 layui-col-sm8 layui-col-md9">
+            <div class="layui-tab">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">加密/解密</li>
+                    <li>散列/哈希</li>
+                    <li>图片转BASE64</li>
+                    <li>进制转换</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <div style="padding: 20px; background-color: #F2F2F2;">
+                            <div class="layui-row layui-col-space15">
+                                <div class="layui-col-md5">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header">原数据<i class="icon-uniQuanping f-r"></i></div>
+                                        <div class="layui-card-body">
+                                            <form class="layui-form" action="">
+                                                <textarea class="layui-textarea" placeholder="在此输入明文，选择对应的加密方式，也可以加入密钥，然后加密即可。"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md2">
+                                    <div class="center-btn pt50">
+                                        <form class="layui-form" action="">
+                                            <div class="layui-form-item">
+                                                <select name="city" lay-verify="required">
+                                                    <option value="AES">AES</option>
+                                                    <option value="DES">DES</option>
+                                                    <option value="RC4">RC4</option>
+                                                    <option value="MD5">MD5</option>
+                                                    <option value="Base64">Base64</option>
+                                                    <option value="Rabbit">Rabbit</option>
+                                                    <option value="TripleDes">TripleDes</option>
+                                                </select>
+                                            </div>
+                                            <div class="layui-form-item">
+                                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="输入密钥(非必填)" class="layui-input">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="center-btn">
+                                        <button class="layui-btn layui-btn-primary">加密 <i class="layui-icon"></i></button>
+                                    </div>
+                                    <div class="center-btn">
+                                        <button class="layui-btn layui-btn-primary"><i class="layui-icon"></i> 解密</button>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md5">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header">密文<i class="icon-uniQuanping f-r"></i></div>
+                                        <div class="layui-card-body">
+                                            <textarea class="layui-textarea" placeholder="加密后的密文会显示在这里。也可以是待解密的密文。"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                        <div style="padding: 20px; background-color: #F2F2F2;">
+                            <div class="layui-row layui-col-space15">
+                                <div class="layui-col-md12">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header">原数据<i class="icon-uniQuanping f-r"></i></div>
+                                        <div class="layui-card-body">
+                                            <form class="layui-form" action="">
+                                                <textarea class="layui-textarea" placeholder="在此输入明文，选择对应的加密方式，也可以加入密钥，然后加密即可。"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <form class="layui-form" action="">
+                                        <div class="layui-form-item">
+                                            <input type="radio" name="SHA" value="SHA1" title="SHA1">
+                                            <input type="radio" name="SHA" value="SHA224" title="SHA224">
+                                            <input type="radio" name="SHA" value="SHA256" title="SHA256">
+                                            <input type="radio" name="SHA" value="SHA384" title="SHA384">
+                                            <input type="radio" name="SHA" value="SHA512" title="SHA512">
+                                            <input type="radio" name="SHA" value="MD5" title="MD5">
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <input type="radio" name="SHA" value="HmacSHA1" title="HmacSHA1">
+                                            <input type="radio" name="SHA" value="HmacSHA224" title="HmacSHA224">
+                                            <input type="radio" name="SHA" value="HmacSHA256" title="HmacSHA256">
+                                            <input type="radio" name="SHA" value="HmacSHA384" title="HmacSHA384">
+                                            <input type="radio" name="SHA" value="HmacSHA512" title="HmacSHA512">
+                                            <input type="radio" name="SHA" value="HmacMD5" title="HmacMD5">
+                                            <input type="radio" name="SHA" value="PBKDF2" title="PBKDF2">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header">密文<i class="icon-uniQuanping f-r"></i></div>
+                                        <div class="layui-card-body">
+                                            <textarea class="layui-textarea" placeholder="加密后的密文会显示在这里。也可以是待解密的密文。"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                        <div style="padding: 20px; background-color: #F2F2F2;">
+                            <div class="layui-row layui-col-space15">
+                                <div class="layui-col-md12">
+                                    <div class="layui-upload-drag" id="test10">
+                                        <i class="layui-icon"></i>
+                                        <p>点击上传，或将文件拖拽到此处。支持的文件格式： PNG、GIF、JPG、SVG、PSD、BMP、ICO、TTF、WOFF、EOT 等格式。(经过Base64 编码后的文件体积一般比源文件大 30% 左右。)</p>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md12">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header">结果<i class="icon-uniQuanping f-r"></i></div>
+                                        <div class="layui-card-body">
+                                            <form class="layui-form" action="">
+                                                <textarea class="layui-textarea" placeholder="大文件需要等一会，也可能会造成浏览器崩溃。"></textarea>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                        <div style="padding: 20px; background-color: #F2F2F2;">
+                            <div class="layui-row layui-col-space15">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+            {include file="advertisement/li1" /}
+        </div>
+    </div>
+</div>
+{include file="common/footer" /}
+<script src="/Tool/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use('element', function(){
+        var element = layui.element;
+        element.on('nav(demo)', function(elem){
+            layer.msg(elem.text());
+        });
+    });
+    layui.use('form', function(){
+        var form = layui.form;
+        form.render();
+    });
+    layui.use('upload', function(){
+        var $ = layui.jquery
+                ,upload = layui.upload;
+        upload.render({
+            elem: '#test10'
+            ,url: '/upload/'
+            ,done: function(res){
+                console.log(res)
+            }
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

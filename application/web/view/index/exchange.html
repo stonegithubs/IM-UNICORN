@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en" class="en-us hb-night" page-name="exchange">
+<head>
+    <meta charset="UTF-8">
+    <title set-lan="html:title"></title>
+    <meta name="keywords" content="BTC/USDT,Huobi Global">
+    <meta name="description"
+          content="BTC/USDTSafe and fast trading. Huobi Global (Pro) provides the real-time prices of over 100 digital coins, and Kline, depth chart, real-time transaction data and detailed coin information. Users can place orders with limit price and market price conveniently.">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="/Web/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/Web/styles/exchange.css">
+
+    <script type="text/javascript" src="/Web/script/loadpage.js"></script>
+
+</head>
+<body class="user_not_login">
+<div class="main_doc">
+    {include file="/common/header" /}
+    <div class="doc_container row">
+        <div class="sidebar">
+            <div style="display: block;" class="exchange_image" id="exchange_image">
+                <a href="/invite/">
+                    <img class="hb-day"
+                         data-src="/Web/image/exchange/invite.en-us.hb-day.jpg"
+                         onerror="this.src=&quot;/Web/image/exchange/invite.en-us.hb-day.jpg&quot;"
+                         src="/Web/image/exchange/invite.en-us.hb-day.jpg">
+                    <img class="hb-night"
+                         data-src="/Web/image/exchange/invite.en-us.hb-night.jpg"
+                         onerror="this.src=&quot;/Web/image/exchange/invite.en-us.hb-night.jpg&quot;"
+                         src="/Web/image/exchange/invite.en-us.hb-night.jpg">
+                </a>
+            </div>
+            <div id="step_guider_four">
+                <div class="desktop" style="display:none" id="total_balance" >
+                    <dl>
+                        <dt set-lan="html:balance_dt"></dt>
+                        <dd>
+                            <b class="font_arial">---</b> <i class="upper">btc</i>
+                            <span class="font_arial upper" style="opacity:.5"></span>
+                        </dd>
+                    </dl>
+                    <i class="eyes hb_icon_visible"  id="total_eyes"></i>
+                </div>
+                <div class="desktop not_login" style="" id="total_balance_to_login" set-lan="html:not_login">
+                </div>
+                <div class="drawer" id="drawer">
+                    <strong set-lan="html:drawer_strong"></strong>
+                    <div class="search_wrap">
+                        <input id="search_keyword" class="uppercase" pro_name="search" value="" maxlength="7">
+                        <i style="display:none" class="search_clear hb_icon_clear" action="clear_key"></i>
+                        <i class="hb_icon_search" flag="search_sign"></i>
+                    </div>
+                    <div class="switch_wrap uppercase" action="switch_quote">
+                        <i class="hb_icon_split_coin"></i>
+                        <b set-lan="html:switch_quote">usd</b>
+                    </div>
+                    <div class="coin_filter">
+                        <span action="userfilter" data-filter-key="usdt" class="cur">usdt</span>
+                        <span action="userfilter" data-filter-key="btc" class="">btc</span>
+                        <span action="userfilter" data-filter-key="eth" class="">eth</span>
+                        <span action="userfilter" data-filter-key="ht" class="">ht</span>
+                        <b action="showmarked" class=""><i class="hb_icon_marked"></i>Marked</b>
+                    </div>
+                    <div class="coin_table">
+                        <dl class="coin_thead">
+                            <dt></dt>
+                            <dd>
+                                <div class="coin_unit">
+                                    <div>
+                                        <span action="usersort" data-sort-key="coin">
+                                            <label set-lan="html:coin_unit"></label>
+                                            <i class=""><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b></i>
+                                        </span>
+                                        <span action="usersort" id="" data-sort-key="price">
+                                            <em id="new_price" data-text="Last Price" set-lan="html:last_price"></em>
+                                            <i class=""><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b> </i>
+                                        </span>
+                                        <span action="usersort" data-sort-key="rate">
+                                            <label set-lan="html:change"></label>
+                                            <i class=""><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <div class="coin_list">
+                            <dl class="" action="gourl" data-symbol="btcusdt" data-symbol-path="btc_usdt">
+                                <dt></dt>
+                                <dd>
+                                    <div class="coin_unit">
+                                        <div><span><i class="hb_icon_unmarked" stop="1" action="mark" data-marked="0"
+                                                      data-symbol="btcusdt"></i><em
+                                                class="base_currency">btc</em></span> <span price="price">6556.60</span>
+                                            <span rate="rate" class="color-sell">-0.50%</span></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="" action="gourl" data-symbol="ethusdt" data-symbol-path="eth_usdt">
+                                <dt></dt>
+                                <dd>
+                                    <div class="coin_unit">
+                                        <div><span><i class="hb_icon_unmarked" stop="1" action="mark" data-marked="0"
+                                                      data-symbol="ethusdt"></i><em
+                                                class="base_currency">eth</em></span> <span price="price">230.42</span>
+                                            <span rate="rate" class="color-sell">-0.70%</span></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="" action="gourl" data-symbol="xrpusdt" data-symbol-path="xrp_usdt">
+                                <dt></dt>
+                                <dd>
+                                    <div class="coin_unit">
+                                        <div><span><i class="hb_icon_unmarked" stop="1" action="mark" data-marked="0"
+                                                      data-symbol="xrpusdt"></i><em
+                                                class="base_currency">xrp</em></span> <span price="price">0.5720</span>
+                                            <span rate="rate" class="color-buy">+0.81%</span></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mod mini_chart" style="position: relative;">
+                <dl id="mini_chart">
+                    <dt set-lan="html:mini_chart_dd"></dt>
+                    <dd><span class="color_down">589.33</span> <span class="color_down">-0.45% <i
+                            class="hb_icon_sort_desc"></i><i class="hb_icon_sort_asc"></i></span></dd>
+                </dl>
+                <canvas width="278" height="98"
+                        style="position: absolute; top: 0px; left: 0px; width: 278px; height: 98px; z-index: 0;"></canvas>
+            </div>
+            <div class="sidebar_notice">
+                <div class="tit">
+                    <a rel="noopener noreferrer" target="_blank" href="" set-lan="html:announcement"></a>
+                </div>
+                <div class="in">
+                    <ul id="notice_list">
+                        <li data-href-id=""><a rel="noopener noreferrer" target="_blank"
+                                               href="https://support.hbg.com/hc/en-us/articles/360000156962-Announcement-on-Supporting-the-SMT-Mainnet-Switch">Announcement
+                            on Supporting the SMT Mainnet Switch</a> 2018-09-29 19:33:28
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page_content">
+            <div class="exchange_container">
+                <div class="mod trading_chart" style="">
+                    <div class="mod_hd"><span class="mod_show_btn"><button><i></i></button></span>
+                        <dl class="ticker_wrap upper" id="ticker_wrap">
+                            <dt>BTC/USDT
+                                <span class="market_type market_type_main" set-lan="html:market_type_main">
+                                </span>
+                                <span class="ticker_close">6556.60</span>
+                            </dt>
+                            <dd><span id="tickerCny_ticker_bar" class="">≈ 6556.60 <label for="" set-lan="html:switch_quote"></label></span></dd>
+                            <dd><label set-lan="html:change"></label> <span name="rate" class="color_down">-0.50%</span></dd>
+                            <dd><label set-lan="html:high"></label> <span name="high">6634.32</span></dd>
+                            <dd><label set-lan="html:low"></label> <span name="low">6548.45</span></dd>
+                            <dd><label set-lan="html:vol"></label> <span name="amount">8009 BTC</span></dd>
+                            <dd class="ticker_logo"><img src="/Web/image/logo.aeb4723.svg" alt="Huobi Global"></dd>
+                        </dl>
+                    </div>
+                    <div id="huobi-chart">
+                        <iframe id="chart_main" name="chart_main" src="/web/index/tv_chart" width="100%" height="480" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="" style="display:block;"></iframe>
+                    </div>
+                    <div class="chartMask" id="chartMask" action="activeChart" style="display: none;">
+                    </div>
+                </div>
+                <div class="hiddentips_wrap" id="hidden_tips"></div>
+                <div class="panel_container">
+                    <div class="margin_account" id="margin_account">
+                        <div class="margin_tit">
+                            <em class="uppercase" lazyfill="<%=base%>">btc</em>/
+                            <em class="uppercase" lazyfill="<%=quote%>">usdt</em>
+                            <em class="uppercase"></em> <label set-lan="html:margin_account"></label>
+                            <em class="risktip">
+                                <i class="hb_icon_toast_failed"></i>
+                                <label set-lan="html:risktip"></label>
+                            </em>
+                            <p>
+                                <a href="" stop="1" action="locationgo" data-path="/margin/margin_center/" set-lan="html:margin_management"></a>
+                            </p>
+                        </div>
+                        <div class="margin_in">
+                            <ul>
+                                <li>
+                                    <label set-lan="html:available"></label>
+                                    <em class="uppercase" lazyfill="<%=quote%>">usdt</em>
+                                    <br>
+                                    <span>---</span>
+                                    <a stop="1" action="marginTransfer" lazyfill="attr" data-template="<%=quote%>"
+                                       data-attr="data-currency" data-currency="usdt" set-lan="html:transfer_in"></a>
+                                </li>
+                                <li>
+                                    <label set-lan="html:available"></label>
+                                    <em class="uppercase" lazyfill="<%=base%>">btc</em>
+                                    <br>
+                                    <span>---</span>
+                                    <a stop="1" action="marginTransfer" lazyfill="attr" data-template="<%=base%>"
+                                        data-attr="data-currency" data-currency="btc" set-lan="html:transfer_in"></a>
+                                </li>
+                                <li>
+                                    <label set-lan="html:liqui_price"></label>(<em class="uppercase" lazyfill="<%=quote%>">usdt</em>)
+                                    <br>
+                                    <span data-text="---">---</span></li>
+                            </ul>
+                            <div class="margin_risk">
+                                <p class="tit">
+                                    <label set-lan="html:rate"></label>
+                                    <i class="hb_icon_tip"><em>Margin Balance/Wallet Balance*100%</em></i>
+                                </p>
+                                <div class="risk_percentage">
+                                    <em>110%</em>
+                                    <div class="bg">
+                                        <b class="fire_text" set-lan="html:fire_text"></b>
+                                        <p class="percent" style="width:0%"><i class="risk_val" data-text="No Risk"></i><s></s></p>
+                                    </div>
+                                    <em>200%</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trade_wrap">
+                        <div class="trade_panel trade_panel_logout">
+                            <div class="mod mod_trade" id="mod_trade_logout">
+                                <div class="mod_hd clear_fix">
+                                    <ul class="mod_tab">
+                                        <li class="cur" set-lan="html:limit_order"></li>
+                                        <li set-lan="html:market_order"></li>
+                                    </ul>
+                                    <div class="fees_rule">
+                                        <p>
+                                            <a href="/etf/hb10/info/" class="hb10_equity" id="hb10_logout_equity" style="display:none"><label
+                                                    set-lan="html:hb10_login_equity"></label><em>---</em></a>
+                                            <a href="/about/fee/" target="_blank" set-lan="html:fee"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="mod_bd clear_fix" growing-ignore="true" style="display: block;">
+                                    <div class="panel">
+                                        <div class="hd" set-lan="html:not_login">
+                                        </div>
+                                        <div class="bd">
+                                            <div>
+                                                <div class="input_text">
+                                                    <b class="label" set-lan="html:buy_price"></b>
+                                                    <label>
+                                                        <input disabled=""><span class="upper unit" unit="show_buy_quote_logout">usdt</span>
+                                                    </label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_text input_text_amount">
+                                                    <b class="label" set-lan="html:buy_amount">Amount</b>
+                                                    <label>
+                                                        <input disabled=""><span class="unit u"><em class="uppercase" lazyfill="<%=base%>">btc</em></span>
+                                                    </label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_range limit_buy_logout buy_color"></div>
+                                                <div class="amount_range uppercase">
+                                                    <span class="min">
+                                                        <span class="min_num">0</span>
+                                                        <em lazyfill="<%=base%>" data-template=" <%=base%>">btc</em>
+                                                    </span>
+                                                    <span class="max">
+                                                        <span class="max_num">0.0000</span>
+                                                        <em lazyfill="<%=base%>" data-template=" <%=base%>">btc</em>
+                                                    </span>
+                                                </div>
+                                                <div class="total">
+                                                    <p><label set-lan="html:total">Total</label> <span></span></p>
+                                                    <p class="transform_total"></p></div>
+                                                <div class="submit">
+                                                    <button disabled="" class="btn_buy color_buy_bg"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        <label set-lan="html:buy">BUY</label>btc
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel sell_panel">
+                                        <div class="hd" set-lan="html:not_login">
+                                        </div>
+                                        <div class="bd">
+                                            <div>
+                                                <div class="input_text">
+                                                    <b class="label" set-lan="html:sell_price">Price</b>
+                                                    <label><input disabled=""> <span class="upper unit" unit="show_sell_quote_logout">usdt</span></label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_text input_text_amount">
+                                                    <b class="label" set-lan="html:sell_amount">Amount</b>
+                                                    <label><input disabled=""> <span class="unit"><em class="uppercase" lazyfill="<%=base%>">btc</em></span></label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_range limit_sell_logout sell_color"></div>
+                                                <div class="amount_range uppercase">
+                                                    <span class="min">
+                                                        <span class="min_num">0</span>
+                                                        <em lazyfill="<%=base%>" data-template=" <%=base%>">btc</em>
+                                                    </span>
+                                                    <span class="max">
+                                                        <span class="max_num">0.0000</span>
+                                                        <em lazyfill="<%=base%>" data-template=" <%=base%>">btc</em>
+                                                    </span>
+                                                </div>
+                                                <div class="total">
+                                                    <p><label set-lan="html:total">Total</label> <span></span></p>
+                                                    <p class="transform_total"></p>
+                                                </div>
+                                                <div class="submit">
+                                                    <button disabled="" class="btn_sell color_sell_bg"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        <label set-lan="html:sell">SELL</label>btc
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mod_bd clear_fix" style="display:none" growing-ignore="true">
+                                    <div class="panel">
+                                        <div class="hd" set-lan="html:not_login"></div>
+                                        <div class="bd">
+                                            <div>
+                                                <div class="input_text">
+                                                    <b class="label">Price</b>
+                                                    <label>
+                                                        <input disabled="" set-lan="placeholder:best_mark_price" placeholder="">
+                                                        <span class="upper unit" unit="show_buy_quote_logout">usdt</span>
+                                                    </label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_text input_text_amount">
+                                                    <b class="label" set-lan="html:total">Total</b>
+                                                    <label>
+                                                        <input disabled=""> <span class="unit uppercase" lazyfill="<%=quote%>">usdt</span>
+                                                    </label>
+                                                    <strong class="msg"></strong>
+                                                </div>
+                                                <div class="input_range market_buy_logout buy_color"></div>
+                                                <div class="amount_range uppercase">
+                                                    <span class="min">
+                                                        <span class="min_num">0</span>
+                                                        <em lazyfill="<%=quote%>" data-template=" <%=quote%>">usdt</em>
+                                                    </span>
+                                                    <span class="max">
+                                                        <span class="max_num">0.0000</span>
+                                                        <em lazyfill="<%=quote%>" data-template=" <%=quote%>">usdt</em>
+                                                    </span>
+                                                </div>
+                                                <div class="total">
+                                                    <p><label set-lan="html:total">Total</label> <span></span></p>
+                                                    <p class="transform_total"></p>
+                                                </div>
+                                                <div class="submit">
+                                                    <button class="btn_buy color_buy_bg" disabled=""
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        <label set-lan="html:buy">BUY</label>btc
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel sell_panel">
+                                        <div class="hd" set-lan="html:not_login"></div>
+                                        <div class="bd">
+                                            <div>
+                                                <div class="input_text"><b class="label" set-lan="html:sell_price">Price</b><label><input
+                                                        disabled="" placeholder="The best market price"> <span
+                                                        class="upper unit"
+                                                        unit="show_sell_quote_logout">usdt</span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_text input_text_amount"><b
+                                                        class="label" set-lan="html:sell_amount">Amount</b><label><input disabled=""> <span
+                                                        class="unit"><em class="uppercase" lazyfill="<%=base%>">btc</em></span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_range market_sell_logout sell_color"></div>
+                                                <div class="amount_range uppercase"><span class="min"><span
+                                                        class="min_num">0</span> <em lazyfill="<%=base%>"
+                                                                                     data-template=" <%=base%>">
+                                                    btc</em> </span><span class="max"><span
+                                                        class="max_num">0.0000</span> <em lazyfill="<%=base%>"
+                                                                                          data-template=" <%=base%>">
+                                                    btc</em></span></div>
+                                                <div class="total"><p><label set-lan="html:total">Total</label> <span></span></p>
+
+                                                    <p class="transform_total"></p></div>
+                                                <div class="submit">
+                                                    <button class="btn_sell color_sell_bg" disabled=""
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        <label set-lan="html:sell">SELL</label>btc
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trade_panel trade_panel_login">
+                            <div class="mod_trade" id="mod_trade">
+                                <div class="mod_hd clear_fix">
+                                    <ul class="mod_tab">
+                                        <li class="cur" set-lan="html:limit_order">Limit Order</li>
+                                        <li set-lan="html:market_order">Market Order</li>
+                                    </ul>
+                                    <div class="fees_rule"><p><a href="/etf/hb10/info/" class="hb10_equity"
+                                                                 id="hb10_login_equity" style="display:none"><label
+                                            set-lan="html:hb10_login_equity">HB10 net value</label><em>---</em></a> <a href="/about/fee/" target="_blank" set-lan="html:fee">Fee</a></p></div>
+                                </div>
+                                <div class="mod_bd clear_fix" growing-ignore="true" style="display: block;">
+                                    <div class="panel">
+                                        <div class="hd hd_login" id="margin_hb_quote" growing-ignore="true"><span set-lan="html:available"></span>
+                                            <b class="buy_available">---</b> <em class="uppercase"
+                                                                                 lazyfill="<%=quote%>">usdt</em> <a
+                                                    class="deposit_btn" style="" id="deposit_limit_quote"
+                                                    action="deposit" data-path="/finance/" lazyfill="attr"
+                                                    data-attr="data-coin" data-template="<%=quote%>" data-coin="usdt" set-lan="html:deposit"></a>
+                                        </div>
+                                        <div class="hd hd_logout" set-lan="html:not_login"></div>
+                                        <div class="bd">
+                                            <form method="post" onsubmit="return!1" action="" id="form_buy_limit"><input
+                                                    type="hidden" name="symbol" value="btcusdt" lazyfill="attr"
+                                                    data-attr="value" data-template="<%=base+quote%>"> <input
+                                                    type="hidden" name="source" value="web"> <input type="hidden"
+                                                                                                    name="type"
+                                                                                                    value="buy-limit">
+
+                                                <div class="input_text"><b class="label" set-lan="html:buy_price"></b><label><input
+                                                        autocomplete="off" name="price" data-datatype="*"
+                                                        data-msg-null="Please enter buy price"
+                                                        data-msg-error="Buy price cannot be more than %s of current price|Buy price cannot be less than %s of current price"
+                                                        maxlength="14"> <span class="upper unit" unit="show_buy_quote">usdt</span></label><strong
+                                                        class="msg"></strong>
+
+                                                    <p class="math_price upper"><em style="" id="buy_limit_math_price">≈
+                                                        6556.90 <span set-lan="html:switch_quote"></span></em></p></div>
+                                                <div class="input_text input_text_amount"><b
+                                                        class="label" set-lan="html:buy_amount"></b><label><input autocomplete="off"
+                                                                                              name="amount"
+                                                                                              data-datatype="*"
+                                                                                              data-msg-null="Please enter buy volume"
+                                                                                              data-msg-error="Buy volume cannot be more than %s|Buy volume cannot be less than %s"
+                                                                                              maxlength="14"> <span
+                                                        class="unit u"><em class="uppercase"
+                                                                           lazyfill="<%=base%>">btc</em></span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_range buy_color login_limit_buy">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress" style="width: 0%;"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point cur" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i><i
+                                                            class="drag_bar" style="left: 0px;"></i><i
+                                                            class="drag_track"></i></div>
+                                                </div>
+                                                <div class="input_range buy_color logout_limit_buy">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="amount_range uppercase"><span class="min"><span
+                                                        class="min_num">0</span> <em lazyfill="<%=base%>"
+                                                                                     data-template=" <%=base%>">
+                                                    btc</em> </span><span class="max"><span
+                                                        class="max_num">0.0000</span> <em lazyfill="<%=base%>"
+                                                                                          data-template=" <%=base%>">
+                                                    btc</em></span></div>
+                                                <div class="total" id="buy_total"><p><label set-lan="html:total">Total</label> <span>0.00000000 USDT</span>
+                                                </p>
+                                                    <p class="transform_total"></p></div>
+                                                <div class="submit">
+                                                    <button class="btn_buy color_buy_bg login_button" type="submit"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        <label set-lan="html:buy">BUY</label>btc
+                                                    </button>
+                                                    <button disabled="" class="btn_buy color_buy_bg logout_button"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        <label set-lan="html:buy">BUY</label>btc
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel sell_panel">
+                                        <div class="hd hd_login" id="margin_hb_base"><span set-lan="html:available"></span> <b
+                                                class="sell_available">---</b> <em class="uppercase"
+                                                                                   lazyfill="<%=base%>">btc</em> <a
+                                                class="deposit_btn" style="" id="deposit_limit_coin" action="deposit"
+                                                data-path="/finance/" lazyfill="attr" data-attr="data-coin"
+                                                data-template="<%=base%>" data-coin="btc" set-lan="html:deposit">Deposit</a> <a
+                                                href="javascript:;" class="deposit_btn no_link" style="display:none"
+                                                id="hb10_limit_coin" set-lan="html:swap_in"></a></div>
+                                        <div class="hd hd_logout" set-lan="html:not_login"></div>
+                                        <div class="bd">
+                                            <form method="post" onsubmit="return!1" id="form_sell_limit"><input
+                                                    type="hidden" name="symbol" lazyfill="attr" data-attr="value"
+                                                    data-template="<%=base+quote%>" value="btcusdt"> <input
+                                                    type="hidden" name="source" value="web"> <input type="hidden"
+                                                                                                    name="type"
+                                                                                                    value="sell-limit">
+
+                                                <div class="input_text"><b class="label" set-lan="html:sell_price">Price</b><label><input
+                                                        autocomplete="off" name="price" data-datatype="*"
+                                                        data-msg-null="Please enter sell price"
+                                                        data-msg-error="Sell price cannot be more than %s|Sell price cannot be less than %s of current price"
+                                                        maxlength="14"> <span class="upper unit" unit="show_sell_quote">usdt</span></label><strong
+                                                        class="msg"></strong>
+
+                                                    <p class="math_price upper"><em style="" id="sell_limit_math_price">≈
+                                                        6554.60 <span set-lan="html:switch_quote"></span></em></p></div>
+                                                <div class="input_text input_text_amount"><b
+                                                        class="label" set-lan="html:sell_amount"></b><label><input autocomplete="off"
+                                                                                              name="amount"
+                                                                                              data-datatype="*"
+                                                                                              data-msg-null="Please enter sell volume"
+                                                                                              data-msg-error="Sell amount cannot be more than %s|Sell amount cannot be less than %s"
+                                                                                              maxlength="14"> <span
+                                                        class="unit"><em class="uppercase" lazyfill="<%=base%>">btc</em></span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_range sell_color login_limit_sell">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress" style="width: 0%;"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point cur" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i><i
+                                                            class="drag_bar" style="left: 0px;"></i><i
+                                                            class="drag_track"></i></div>
+                                                </div>
+                                                <div class="input_range sell_color logout_limit_sell">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="amount_range uppercase"><span class="min"><span
+                                                        class="min_num">0</span> <em lazyfill="<%=base%>"
+                                                                                     data-template=" <%=base%>">
+                                                    btc</em> </span><span class="max"><span
+                                                        class="max_num">0.0000</span> <em lazyfill="<%=base%>"
+                                                                                          data-template=" <%=base%>">
+                                                    btc</em></span></div>
+                                                <div class="total" id="sell_total"><p><label set-lan="html:total"></label> <span>0.00000000 USDT</span>
+                                                </p>
+
+                                                    <p class="transform_total"></p></div>
+                                                <div class="submit">
+                                                    <button class="btn_sell color_sell_bg login_button" type="submit"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        <label set-lan="html:sell">SELL</label>btc
+                                                    </button>
+                                                    <button disabled="" class="btn_sell color_sell_bg logout_button"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        <label set-lan="html:sell">SELL</label>btc
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mod_bd clear_fix" style="display:none" growing-ignore="true">
+                                    <div class="panel">
+                                        <div class="hd hd_login" id="margin_hb_quote1"><span set-lan="html:available"></span> <b
+                                                class="buy_available">---</b> <em class="uppercase"
+                                                                                  lazyfill="<%=quote%>">usdt</em> <a
+                                                class="deposit_btn" style="" id="deposit_market_quote" action="deposit"
+                                                data-path="/finance/" lazyfill="attr" data-attr="data-coin"
+                                                data-template="<%=quote%>" data-coin="usdt" set-lan="html:deposit">Deposit</a></div>
+                                        <div class="hd hd_logout" set-lan="html:not_login">
+                                        </div>
+                                        <div class="bd">
+                                            <form method="post" onsubmit="return!1" id="form_buy_market"><input
+                                                    type="hidden" name="symbol" lazyfill="attr" data-attr="value"
+                                                    data-template="<%=base+quote%>" value="btcusdt"> <input
+                                                    type="hidden" name="source" value="web"> <input type="hidden"
+                                                                                                    name="type"
+                                                                                                    value="buy-market">
+
+                                                <div class="input_text"><b class="label">Price</b><label><input
+                                                        disabled="" placeholder="The best market price"> <span
+                                                        class="upper unit" unit="show_buy_quote">usdt</span></label>
+
+                                                    <p class="math_price upper"></p></div>
+                                                <div class="input_text input_text_amount"><b
+                                                        class="label">Total</b><label><input data-precision="volumes"
+                                                                                             autocomplete="off"
+                                                                                             name="amount"
+                                                                                             data-datatype="*"
+                                                                                             data-msg-null="Please enter trading amount"
+                                                                                             data-msg-error="Trading amount cannot be more than %s|Trading amount cannot be less than %s"
+                                                                                             maxlength="14"> <span
+                                                        class="unit uppercase" lazyfill="<%=quote%>">usdt</span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_range buy_color login_market_buy">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress" style="width: 0%;"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point cur" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i><i
+                                                            class="drag_bar" style="left: 0px;"></i><i
+                                                            class="drag_track"></i></div>
+                                                </div>
+                                                <div class="input_range buy_color logout_market_buy">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="amount_range uppercase"><span class="min"><span
+                                                        class="min_num">0</span> <em lazyfill="<%=quote%>"
+                                                                                     data-template=" <%=quote%>">
+                                                    usdt</em> </span><span class="max"><span
+                                                        class="max_num">0.0000</span> <em lazyfill="<%=quote%>"
+                                                                                          data-template=" <%=quote%>">
+                                                    usdt</em></span></div>
+                                                <div class="submit">
+                                                    <button class="btn_buy color_buy_bg login_button" type="submit"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        BUYbtc
+                                                    </button>
+                                                    <button disabled="" class="btn_buy color_buy_bg logout_button"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' BUY' + (TRADE_TYPE === 'margin' ? '(LONG)' : '')) : ('BUY'+(TRADE_TYPE === 'margin' ? ('(LONG)'+base) : base)  )%>">
+                                                        BUYbtc
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel sell_panel">
+                                        <div class="hd hd_login" id="margin_hb_base1"><span>Available</span> <b
+                                                class="sell_available">---</b> <em class="uppercase"
+                                                                                   lazyfill="<%=base%>">btc</em> <a
+                                                class="deposit_btn" style="" id="deposit_market_coin" action="deposit"
+                                                data-path="/finance/" lazyfill="attr" data-attr="data-coin"
+                                                data-template="<%=base%>" data-coin="btc">Deposit</a> <a
+                                                href="javascript:;" class="deposit_btn no_link" style="display:none"
+                                                id="hb10_market_coin">Swap in</a><a> </a></div>
+                                        <div class="hd hd_logout"><a class="logout" href="javascript:void(0)"
+                                                                     data-action="go_login">Log In</a> or <a
+                                                class="logout" href="javascript:void(0)" data-action="go_register">Sign
+                                            Up</a> to trade
+                                        </div>
+                                        <div class="bd">
+                                            <form method="post" onsubmit="return!1" action="" id="form_sell_market">
+                                                <input type="hidden" name="symbol" lazyfill="attr" data-attr="value"
+                                                       data-template="<%=base+quote%>" value="btcusdt"> <input
+                                                    type="hidden" name="source" value="web"> <input type="hidden"
+                                                                                                    name="type"
+                                                                                                    value="sell-market">
+
+                                                <div class="input_text"><b class="label">Price</b><label><input
+                                                        disabled="" placeholder="The best market price"> <span
+                                                        class="upper unit" unit="show_sell_quote">usdt</span></label>
+
+                                                    <p class="math_price upper"></p></div>
+                                                <div class="input_text input_text_amount"><b
+                                                        class="label">Amount</b><label><input autocomplete="off"
+                                                                                              name="amount"
+                                                                                              data-datatype="*"
+                                                                                              data-msg-null="Please enter sell volume"
+                                                                                              data-msg-error="Maximum available sell volume is %s|Sell volume cannot be less than %s"
+                                                                                              maxlength="14"> <span
+                                                        class="unit"><em class="uppercase" lazyfill="<%=base%>">btc</em></span></label><strong
+                                                        class="msg"></strong></div>
+                                                <div class="input_range sell_color login_market_sell">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress" style="width: 0%;"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point cur" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i><i
+                                                            class="drag_bar" style="left: 0px;"></i><i
+                                                            class="drag_track"></i></div>
+                                                </div>
+                                                <div class="input_range sell_color logout_market_sell">
+                                                    <div class="range" tabindex="0">
+                                                        <div class="progress"></div>
+                                                        <div class="path"></div>
+                                                        <i class="point" data-point="0"
+                                                           style="left: 0%; transform: translateX(0%);"></i><i
+                                                            class="point" data-point="25"
+                                                            style="left: 25%; transform: translateX(-25%);"></i><i
+                                                            class="point" data-point="50"
+                                                            style="left: 50%; transform: translateX(-50%);"></i><i
+                                                            class="point" data-point="75"
+                                                            style="left: 75%; transform: translateX(-75%);"></i><i
+                                                            class="point" data-point="100" style="right: 0px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="amount_range uppercase"><span class="min"><span
+                                                        class="min_num">0</span> <em lazyfill="<%=base%>"
+                                                                                     data-template=" <%=base%>">
+                                                    btc</em> </span><span class="max"><span
+                                                        class="max_num">0.0000</span> <em lazyfill="<%=base%>"
+                                                                                          data-template=" <%=base%>">
+                                                    btc</em></span></div>
+                                                <div class="submit">
+                                                    <button class="btn_sell color_sell_bg login_button" type="submit"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        SELLbtc
+                                                    </button>
+                                                    <button disabled="" class="btn_sell color_sell_bg logout_button"
+                                                            lazyfill="<%=STORE.lang.toLowerCase()  === 'de-de' ? (base+' SELL' + (TRADE_TYPE === 'margin' ? '(SHORT)' : '')) : ('SELL'+(TRADE_TYPE === 'margin' ? ('(SHORT)'+base) : base)  )%>">
+                                                        SELLbtc
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_book table-container">
+                            <div class="head">
+                                <p class="title">
+                                    <label set-lan="html:last_price">Last Price</label>
+                                    <span id="tickerClose">6556.60</span>
+                                    <em class="uppercase" lazyfill="<%=quote%>">usdt</em>
+                                    <span id="tickerCny" class="ticker-transform upper">≈ 6556.60 <label
+                                            set-lan="html:switch_quote"></label></span>
+                                </p>
+                            </div>
+                            <div class="ex-depth">
+                                <div id="market_depth">
+                                    <dl>
+                                        <dt class="header">
+                                            <span class="title"></span>
+                                            <span class="price"><label set-lan="html:price"></label>(USDT)</span>
+                                            <span class="amount"><label set-lan="html:amount"></label><em class="uppercase">(btc)</em></span>
+                                            <span><label set-lan="html:sum"></label><em class="uppercase">(btc)</em></span>
+                                        </dt>
+                                        <dd data-info="6556.60">
+                                            <div class="inner">
+                                                <span class="title color-sell"><label set-lan="html:sell_copy">SELL</label> 1</span>
+                                                <span class="price">6556.60</span> <span class="amount">0.2817</span>
+                                                <span>0.2817</span>
+                                                <b class="color-sell-bg" style="width: 6.398346469212074%"></b>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <div class="dl-hr">
+                                        <hr>
+                                        <hr>
+                                    </div>
+                                    <dl>
+                                        <dd name="depth-item" data-info="6556.18">
+                                            <div class="inner">
+                                                <span class="title color-buy"><label set-lan="html:buy_copy"></label> 1</span>
+                                                <span class="price">6556.18</span>
+                                                <span class="amount">0.0208</span>
+                                                <span>0.0208</span>
+                                                <b class="color-buy-bg" style="width: 12.215231562450313%"></b>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="link-group clearFix">
+                                    <div id="depth_select" class="depth-select">
+                                        <span set-lan="html:shendu"></span>
+                                        <span id="depth_step">0.000001</span>
+                                        <ul>
+                                            <li class="active" data-depth="0">0.000001</li>
+                                            <li data-depth="1">0.00001</li>
+                                            <li data-depth="2">0.0001</li>
+                                        </ul>
+                                    </div>
+                                    <a href="../depth/?trade=exchange" lazyfill="attr" data-attr="href"
+                                       data-template="../depth/?trade=<%=TRADE_TYPE%>" set-lan="html:more"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="open_history_order">
+                    <div class="mod open_orders" id="open_orders_scroll" style="display:none">
+                        <div class="mod_hd l_transac_title"><span class="mod_show_btn"><button><i></i></button> <span set-lan="html:open_orders"></span></span>
+                            <ul class="l_tab_transac">
+                                <li data-type="buy"><a href="javascript:;" set-lan="html:buy"></a></li>
+                                <li data-type="sell"><a href="javascript:;" set-lan="html:sell">Sell</a></li>
+                                <li class="z_active" data-type="all"><a href="javascript:;" set-lan="html:all">All</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_bd transac_body l_show_box" growing-ignore="true">
+                            <div class="transac_body_main">
+                                <div class="transac_table_box open_orders" id="open_orders" style="display:block"
+                                     growing-ignore="true">
+                                    <div class="loading"></div>
+                                    <div id="open_orders_body">
+                                        <ul class="l_th">
+                                            <li class="trade_time" set-lan="html:date"></li>
+                                            <li class="trade_type" set-lan="html:type"></li>
+                                            <li set-lan="html:market_pairs"></li>
+                                            <li set-lan="html:order_type"></li>
+                                            <li set-lan="html:price"></li>
+                                            <li set-lan="html:amount"></li>
+                                            <li set-lan="html:order_total"></li>
+                                            <li set-lan="html:executed"></li>
+                                            <li set-lan="html:unexecuted"></li>
+                                            <li set-lan="html:action"></li>
+                                        </ul>
+                                        <div class="list_prompt J_list_prompt" style="display:block" set-lan="html:no_records"></div>
+                                        <div class="l_paging"></div>
+                                        <ul class="l_th">
+                                            <li class="trade_time" set-lan="html:date"></li>
+                                            <li class="trade_type" set-lan="html:type"></li>
+                                            <li set-lan="html:market_pairs"></li>
+                                            <li set-lan="html:order_type"></li>
+                                            <li><label for="" set-lan="html:price"></label> (USDT)</li>
+                                            <li><label for="" set-lan="html:amount"></label> (USDT)</li>
+                                            <li><label for="" set-lan="html:order_total"></label> (USDT)</li>
+                                            <li set-lan="html:executed"></li>
+                                            <li set-lan="html:unexecuted"></li>
+                                            <li set-lan="html:action"></li>
+                                        </ul>
+                                        <div class="list_prompt J_list_prompt" set-lan="html:no_records"></div>
+                                        <div class="list_prompt m_search J_list_prompt_search" set-lan="html:no_results">
+                                        </div>
+                                        <div class="l_transac_list">
+                                            <div class="l_tr">
+                                                <ul>
+                                                    <li class="trade_time"></li>
+                                                    <li class="trade_type"></li>
+                                                    <li class="trade_pair" action="goTrade" data-info="<%=_tr.pairs%>/<%=_tr.tradeType%>"></li>
+                                                    <li class="color_<%=_tr.type.class%>"></li>
+                                                    <li class="color_<%=_tr.type.class%>"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li><a href="javascript:;" data-id="<%=_tr.id%>" class="btn_cancel" set-lan="html:order_cancel"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="l_paging">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:;" data-page-id="<%=prev%>" data-page-type="prev" set-lan="html:prev">Prev</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" data-page-id="<%=next%>" data-page-type="next" set-lan="html:next">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mod order_history" id="order_history_scroll" style="display:none">
+                        <div class="mod_hd l_transac_title">
+                            <span class="mod_show_btn">
+                                <button><i></i></button>
+                                <span set-lan="html:order_history"></span>
+                                <em set-lan="html:days_7"></em>
+                            </span>
+                            <ul class="l_tab_transac">
+                                <li data-type="buy"><a href="javascript:;" set-lan="html:buy">Buy</a></li>
+                                <li data-type="sell"><a href="javascript:;" set-lan="html:sell">Sell</a></li>
+                                <li class="z_active" data-type="all"><a href="javascript:;" set-lan="html:all"></a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_bd transac_body l_show_box" growing-ignore="true">
+                            <div class="transac_body_main">
+                                <div class="transac_table_box order_history" id="order_history" growing-ignore="true"
+                                     style="display: block;">
+                                    <div class="loading"></div>
+                                    <div id="order_history_body">
+                                        <ul class="l_th">
+                                            <li class="trade_time" set-lan="html:date"></li>
+                                            <li class="trade_type" set-lan="html:type"></li>
+                                            <li set-lan="html:market_pairs"></li>
+                                            <li set-lan="html:order_type"></li>
+                                            <li set-lan="html:price"></li>
+                                            <li set-lan="html:amount"></li>
+                                            <li set-lan="html:executed"></li>
+                                            <li set-lan="html:avg_price"></li>
+                                            <li set-lan="html:status"></li>
+                                            <li set-lan="html:action"></li>
+                                        </ul>
+                                        <div class="list_prompt J_list_prompt" style="display:block" set-lan="html:no_records"></div>
+                                        <div class="l_paging"></div>
+                                        <ul class="l_th">
+                                            <li class="trade_time" set-lan="html:date"></li>
+                                            <li class="trade_type" set-lan="html:type"></li>
+                                            <li set-lan="html:market_pairs"></li>
+                                            <li set-lan="html:order_type"></li>
+                                            <li set-lan="html:price"><%if(quote){%> (<%=quote%>)<%}%></li>
+                                            <li set-lan="html:amount"><%if(coin){%> (<%=coin%>)<%}%></li>
+                                            <li set-lan="html:executed"></li>
+                                            <li set-lan="html:avg_price"></li>
+                                            <li set-lan="html:status"></li>
+                                            <li set-lan="html:action"></li>
+                                        </ul>
+                                        <div class="list_prompt J_list_prompt" set-lan="html:no_records"></div>
+                                        <div class="list_prompt m_search J_list_prompt_search" set-lan="html:no_results">
+                                        </div>
+                                        <div class="l_transac_list">
+                                            <div class="l_tr">
+                                                <ul>
+                                                    <li class="trade_time"></li>
+                                                    <li class="trade_type"></li>
+                                                    <li class="trade_pair" action="goTrade" data-info="<%=_tr.pairs%>/<%=_tr.tradeType%>"></li>
+                                                    <li class="color_<%=_tr.type.class%>"></li>
+                                                    <li class="color_<%=_tr.type.class%>"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li>
+                                                        Cancelled/Incomplete/Executed
+                                                        <span class="tips_box">
+                                                            <i class="hb_icon_tip">
+                                                                <em><span>
+                                                                    由于该订单触发市价单限制规则，订单部分成交，未成交部分已返回账户
+                                                                    As this order triggers the market order limit, it is executed partially and the unexecuted amount has been returned to your account.</span></em>
+                                                            </i>
+                                                        </span>
+                                                    </li>
+                                                    <li><a href="javascript:;"  class="btn_details" set-lan="html:order_detail"><span></span><i></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="l_paging">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:;" data-page-id="<%=prev%>" data-page-type="prev" set-lan="html:prev"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" data-page-id="<%=next%>" data-page-type="next" set-lan="html:next"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="market_wrap clear_fix">
+                    <div class="mod market_depth">
+                        <div class="mod_hd"><span class="mod_show_btn"><button><i></i>
+                        </button> <span set-lan="html:market_depth"></span></span></div>
+                        <div class="mod_bd">
+                            <div class="market_depth_chart" id="depth_chart" style="position: relative;">
+                                <canvas width="598" height="472"
+                                        style="position: absolute; width: 598px; height: 472px;"></canvas>
+                                <canvas width="598" height="472"
+                                        style="position: absolute; width: 598px; height: 472px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mod market_trades">
+                        <div class="mod_hd"><span class="mod_show_btn"><button><i></i>
+                        </button> <span set-lan="html:market_trades"></span></span></div>
+                        <div class="mod_bd">
+                            <div class="market_trades_list" id="market_trades_list">
+                                <dl class="market_trades_time">
+                                    <dt set-lan="html:date">Date</dt>
+                                    <dd>13:30:32</dd>
+                                    <dd>13:30:31</dd>
+                                </dl>
+                                <dl class="market_trades_type">
+                                    <dt set-lan="html:order_type">Type</dt>
+                                    <dd class="color_up">BUY</dd>
+                                    <dd class="color_down">SELL</dd>
+                                </dl>
+                                <dl class="market_trades_price">
+                                    <dt><label set-lan="html:price">Price</label><span class="uppercase">(usdt)</span></dt>
+                                    <dd>6556.60</dd>
+                                    <dd>6556.60</dd>
+                                </dl>
+                                <dl class="market_trades_amount">
+                                    <dt><label set-lan="html:amount">Amount</label><span class="uppercase">(btc)</span></dt>
+                                    <dd>0.0080</dd>
+                                    <dd>0.0522</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coin_detail">
+                <div class="mod">
+                    <div class="mod_hd">
+                        <span class="mod_show_btn"><button><i></i></button> <span set-lan="html:coin_basics"></span> </span>
+                        <a href="/assetintro/#" id="coin_detail_more"
+                           lazyfill="attr" data-attr="href"
+                           data-template="/assetintro/#<%=PAGE_SYMBOL_ARR[0]%>"
+                           class="f_l" set-lan="html:learn_more"></a>
+                    </div>
+                    <div class="mod_bd" id="coin_detail_in">
+                        <div class="left">
+                            <h3><span class="uppercase">btc</span> Bitcoin</h3>
+                            <div class="in">
+                                <span set-lan="html:introduction"></span>
+                                <p> Bitcoin is a digital asset and a payment system invented by Satoshi Nakamoto who
+                                    published a related paper in 2008 and released it as open-source software in 2009.
+                                    The system featured as peer-to-peer; users can transact directly without an
+                                    intermediary. </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li><span set-lan="html:issue_time"></span><p>2008-11-01</p></li>
+                                <li><span set-lan="html:issue_amount"></span><p>21,000,000</p></li>
+                                <li><span set-lan="html:circulation"></span><p>16,789,425</p></li>
+                                <li><span set-lan="html:token_price"></span><p>--</p></li>
+                                <li><span set-lan="html:white_paper"></span>
+                                    <p><a href="http://www.bitcoin.org/bitcoin.pdf" target="_blank"
+                                          rel="noopener noreferrer">http://www.bitcoin.org/bitcoin.pdf</a></p></li>
+                                <li><span set-lan="html:official_web"></span>
+                                    <p><a href="https://bitcoin.org/en/" target="_blank" rel="noopener noreferrer">https://bitcoin.org/en/</a>
+                                    </p></li>
+                                <li><span set-lan="html:block_explorer"></span>
+                                    <p><a href="https://blockchain.info/" target="_blank" rel="noopener noreferrer">https://blockchain.info/</a>
+                                    </p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="/common/footer" /}
+{include file="/common/dialog" /}
+</body>
+<script type="text/javascript" src="/Web/script/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/Web/script/commons.js"></script>
+<script type="text/javascript" src="/Web/script/header.js"></script>
+</html>

@@ -1,0 +1,201 @@
+<html lang="zh" class="hb-day zh-cn" page-name="markets">
+<head>
+    <meta charset="UTF-8">
+    <title set-lan="html:title"></title>
+    <meta name="keywords" content="”数字货币交易,数字货币行情,火币Global“/">
+    <meta name="description"
+          content="行情中心全面了解数字货币信息，火币Global提供上百种数字货币交易对的最新价格、涨幅、最高价格、最低价格、24小时交易量及24小时成交额，并且可以快速跳转至交易页面，及币种基本信息和最新资讯。">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link href="/Web/styles/index.css" rel="stylesheet">
+    <script type="text/javascript" src="/Web/script/loadpage.js"></script>
+    <link href="/Web/styles/markets.css" rel="stylesheet">
+</head>
+<body class="user_not_login">
+{include file="/common/header" /}
+<div class="layout_container" id="markets">
+    <div class="container_nav">
+        <div class="inner"><a href="javascript:;" set-lan="html:exchange">币币</a></div>
+    </div>
+    <div class="layout_inner">
+        <div class="left_inner">
+            <nav class="nav_first">
+                <a data-value="my_market" href="javascript:void(0);"><i class="hb_icon_marked"></i> <span set-lan="html:favorites"></span></a>
+                <a data-nav="0" href="javascript:void(0);" class="nav_link active" set-lan="html:all"></a>
+                <div class="nav_action">
+                    <label class="nav_search">
+                        <i class="hb_icon_search"></i>
+                        <input set-lan="placeholder:search" placeholder="" data-ee="filterInput">
+                        <i class="hb_icon_clear" data-ee="clearSearch" id="search_clear"></i>
+                    </label>
+                </div>
+            </nav>
+            <ul class="nav_second" id="nav_second" style="display: none;">
+                <li  data-ee="nav_hash" class="active" data-val="usdt" >usdt</li>
+                <li  data-ee="nav_hash" data-val="btc" >btc</li>
+                <li  data-ee="nav_hash" data-val="eth" >eth</li>
+            </ul>
+            <div class="market_body">
+                <div class="content_body symbol_shadow" id="scroll_content">
+                    <div class="symbol_list body_head" id="scroll_head" style="padding-right: 34px;">
+                        <dt>
+                            <span></span>
+                            <span>
+                                <em class="sort" data-sort-key="symbol"><label set-lan="html:symbol"></label> <i><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b></i></em>
+                            </span>
+                            <span>
+                                <em class="sort" data-sort-key="newPrice"><label set-lan="html:close_price"></label> <i><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b></i></em>
+                            </span>
+                            <span>
+                                <em class="sort" data-sort-key="increase"><label set-lan="html:rate"></label> <i><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b> </i></em>
+                            </span>
+                            <span set-lan="html:height_price"></span>
+                            <span set-lan="html:low_price"></span>
+                            <span set-lan="html:qty_24"></span>
+                            <span>
+                                <em class="sort" data-sort-key="qtyStr"><label set-lan="html:voles_24"></label> <i><b class="hb_icon_sort_asc"></b> <b class="hb_icon_sort_desc"></b></i></em>
+                            </span>
+                        </dt>
+                    </div>
+                    <div class="symbol_list" id="symbol_list" style="display: none;">
+                        <dd class="goDetail" v-for="symbol in symbol_list"  :data-currency="symbol.baseCurrency"  :data-quote="symbol.quoteCurrency" :data-symbol="symbol.symbol">
+                            <span>
+                                <i data-ee="my_marked" data-action="star" :data-symbol="symbol.symbol" class="hb_icon_marked "></i>
+                            </span>
+                            <span class="uppercase">
+                                {{ symbol.baseCurrency }}
+                                <em class="tag margin show_tag" data-tips="交易对支持的杠杆倍数">3.5X</em>
+                            </span>
+                            <span class="wrap price"><b class="close">{{ symbol.newPrice }}</b><em class="estimated">≈ ¥{{ symbol.newPriceStr }}</em></span>
+                            <span><b :class="symbol.increaseStr">{{ symbol.increase }}%</b></span>
+                            <span class="wrap high">
+                                <b class="close">{{ symbol.highPrice }}</b><em class="estimated">≈ ¥{{ symbol.highPriceStr }}</em>
+                            </span>
+                            <span class="wrap low">
+                                <b class="close">{{ symbol.lowPrice }}</b><em class="estimated">≈ ¥{{ symbol.lowPriceStr }}</em>
+                            </span>
+                            <span class="amount">{{ symbol.qty }}</span>
+                            <span class="vol">¥ {{ symbol.qtyStr }}</span>
+                        </dd>
+                    </div>
+                    <div class="content"><ul id="symbolList" style="display: none;">  <li class="no_record">暂无记录</li>  </ul></div>
+                </div>
+            </div>
+        </div>
+        <div class="right_inner" id="symbol_detail">
+            <button data-ee="close_panel" class="close_panel"><i class="hb_icon_close"></i></button>
+            <nav class="nav_first">
+                <span class="nav_title" set-lan="html:overview"></span>
+                <i id="marked_elem" data-ee="my_marked" class="hb_icon_marked" data-symbol="btcusdt" style="margin-top: 10px;"></i>
+            </nav>
+            <div class="market_body">
+                <div class="content_body">
+                    <div class="top" style="display: none;">
+                        <div class="head">
+                            <div class="currency_logo fl" style="display: none;"></div>
+                            <p class="fl"><i></i> <span class="uppercase symbol">{{ symbol_data.baseCurrency }}/{{ symbol_data.quoteCurrency }}</span></p>
+
+                            <div class="tag fr" id="tags" style="display: block;">
+                                <span class="tag_type show_tag" data-pos="left" data-tips="" set-lan="html:main"></span> <em class="tag_x show_tag" data-pos="left" data-tips="交易对支持的杠杆倍数">3.5X</em></div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="chart fl" id="realTimeChart" data-ee="goExchange"
+                                 style="position: relative; display: block;">
+                                <img src="/Web/image/charts.png" alt="">
+                            </div>
+                            <div class="fr">
+                                <p class="price rate up">{{ symbol_data.newPrice }}</p>
+                                <p class="estimated">≈ ¥{{ symbol_data.newPriceStr }}</p>
+                                <p>24H量<span class="amount">{{ symbol_data.qty }}</span></p>
+                                <p :class="symbol_data.increaseStr">+{{ symbol_data.increase }}%</p>
+                                <div class="exchange" data-ee="goExchange" set-lan="html:go_exchange"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom" style="display: none;">
+                        <ul class="tab">
+                            <li data-ee="changeType" data-index="0" class="cur" set-lan="html:basic_information"></li>
+                            <li data-ee="changeType" data-index="1" set-lan="html:news"></li>
+                        </ul>
+                        <div class="clearfix" id="contentBox">
+                            <div data-index="0" class="content base_info cur">
+                                <ul>
+                                    <li>
+                                        <div set-lan="html:coin"></div>
+                                        <div class="name cut" :title="symbol_data.name">{{ symbol_data.name }}</div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:issue_date"></div>
+                                        <div class="time cut">{{ symbol_data.issue_date }}</div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:total_amount"></div>
+                                        <div class="publish cut">{{ symbol_data.total_amount }}</div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:circulation"></div>
+                                        <div class="circulate cut">{{ symbol_data.circulation }}</div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:token_price"></div>
+                                        <div class="price cut" title="--">--</div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:link"></div>
+                                        <div class="link">
+                                            <a :href="symbol_data.web_url" target="_blank" rel="noopener noreferrer" set-lan="html:official_website"></a>
+                                            <a :href="symbol_data.white_paper_url" target="_blank" rel="noopener noreferrer" set-lan="html:white_paper"></a>
+                                            <a :href="symbol_data.block_explorer_url" target="_blank" rel="noopener noreferrer" set-lan="html:block_explorer"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div set-lan="html:introduction"></div>
+                                        <div class="intro">{{ symbol_data.intro }}</div>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <span class="go_project link_hover" id="goProjectCenter" data-ee="goProjectCenter"
+                                           style="display: inline-block;" set-lan="html:visit_project"></span>
+                                    <span class="go_project" style="display: inline-block;">| </span>
+                                    <span class="link_hover" data-ee="moreDetail" set-lan="html:view_more"></span>
+                                </div>
+                            </div>
+                            <div data-index="1" class="content news_info">
+                                <ul id="newsList">
+                                    <div>
+                                        <li>
+                                            <a href="https://info.huobi.cn/news/baseDetail_29902"
+                                               rel="noopener noreferrer" target="_blank">
+                                                <div class="title">币聪：对比N个数字币钱包，最后推荐这几款比特币钱包</div>
+                                                <div class="summary">比特币（BTC）于2009年首次由神秘的中本聪（ Satoshi Nakamoto
+                                                    ）向全世界发布，比特币（BTC）经历
+                                                </div>
+                                                <div class="push_time">2018-12-04 11:16:38</div>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="no_data" style="display: none;" set-lan="html:no_data"></div>
+                                <div class="load_more" style="display: block;"><span data-ee="loadMore" set-lan="html:click_loadmore"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="markets_footer"><p>© 2013-2018 Huobi Global</p></footer>
+{include file="/common/dialog" /}
+</body>
+<script type="text/javascript" src="/Web/script/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/Web/script/commons.js"></script>
+<script type="text/javascript" src="/Web/script/header.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="/Web/script/pako/1.0.6/pako.min.js"></script>
+<script type="text/javascript" src="/Web/script/markets.js"></script>
+</html>

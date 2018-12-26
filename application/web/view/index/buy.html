@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en" page-name="buy">
+<head>
+    <meta charset="utf-8">
+    <title set-lan="html:title"></title>
+    <meta name="keywords" content="buy,BTC">
+    <meta name="description" content="The buy BTC page, on the Huobi OTC platform, where thousands of Huobi authorized  BTC buying merchants settle. The merchants offer extremely fast transaction time, no service fee and support mutiple payment methods including bank card, Alipay and Wechatpay. Huobi OTC offers outstanding BTC trading platform for its clients.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="”renderer”" content="”webkit”">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/Web/styles/font.css">
+    <link rel="stylesheet" type="text/css" href="/Web/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/Web/styles/app.css">
+    <script type="text/javascript" src="/Web/script/loadpage.js"></script>
+</head>
+<body>
+<div data-v-d20f0338="" id="app" class="fillWidth">
+    <div data-v-d20f0338="" class="left fillWidth">
+        {include file="/common/header" /}
+        <div data-v-d20f0338="" class="trade-page-container" style="min-height: 342px;background-color: #fff;">
+            <div class="ivu-row-flex ivu-row-flex-center">
+                <div class="trade-responsive ivu-col ivu-col-span-xs-24 ivu-col-span-lg-14">
+                    <div class="auth-process-wrapper">
+                        <p class="font14 font-base" set-lan="html:auth_process_msg"></p>
+                    </div>
+                    <div class="otc-trade-title is-auth-show">
+                        <nav class="trade-menu">
+                            <div class="menu-list">
+                                <p class="font14 font-base" set-lan="html:buy"></p>
+                                <a href="/en-us/trade/buy-btc/"
+                                   class="font16 router-link-exact-active router-link-active active"
+                                   rel="noopener noreferrer">
+                                BTC
+                                </a>
+                                <a href="/en-us/trade/buy-eth/" class="font16" rel="noopener noreferrer">
+                                ETH
+                                </a>
+                                <a href="/en-us/trade/buy-usdt/" class="font16" rel="noopener noreferrer">
+                                USDT
+                                </a>
+                                <a href="/en-us/trade/buy-eos/" class="font16" rel="noopener noreferrer">
+                                EOS
+                                </a>
+                                <a href="/en-us/trade/buy-ht/" class="font16" rel="noopener noreferrer">
+                                HT
+                                </a>
+                            </div>
+                            <div class="menu-list">
+                                <p class="font14 font-base" set-lan="html:sell"></p>
+                                <a href="/en-us/trade/sell-btc/" class="font16" rel="noopener noreferrer">
+                                BTC
+                                </a>
+                                <a href="/en-us/trade/sell-eth/" class="font16" rel="noopener noreferrer">
+                                ETH
+                                </a>
+                                <a href="/en-us/trade/sell-usdt/" class="font16" rel="noopener noreferrer">
+                                USDT
+                                </a>
+                                <a href="/en-us/trade/sell-eos/" class="font16" rel="noopener noreferrer">
+                                EOS
+                                </a>
+                                <a href="/en-us/trade/sell-ht/" class="font16" rel="noopener noreferrer">
+                                HT
+                                </a>
+                            </div>
+                        </nav>
+                        <div class="m-trade-menu">
+                            <div class="m-trade-type">
+                                <a href="/en-us/trade/buy-btc/"
+                                   class="font-blue router-link-exact-active router-link-active active"
+                                   rel="noopener noreferrer" set-lan="html:buy"></a>
+                                <a href="/en-us/trade/sell-btc/" class="font-blue" rel="noopener noreferrer" set-lan="html:sell"></a>
+                            </div>
+                            <div class="m-trade-coin">
+                                <a href="/en-us/trade/buy-btc/"
+                                   class="router-link-exact-active router-link-active active"
+                                   rel="noopener noreferrer">BTC
+                                </a><a href="/en-us/trade/buy-eth/" class="" rel="noopener noreferrer">ETH
+                                </a><a href="/en-us/trade/buy-usdt/" class="" rel="noopener noreferrer">USDT
+                                </a><a href="/en-us/trade/buy-eos/" class="" rel="noopener noreferrer">EOS
+                                </a><a href="/en-us/trade/buy-ht/" class="" rel="noopener noreferrer">HT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="search-wrapper">
+                            <div class="show-wrapper autoWidth">
+                                <div class="tag-container" style="margin-right: 8px;">
+                                    <div class="ivu-tag ivu-tag-checked"
+                                         style="background: rgb(153, 153, 153); border-width: 1px; border-style: solid; border-color: rgb(153, 153, 153); color: rgb(255, 255, 255);">
+                                        <span class="ivu-tag-text ivu-tag-color-white"
+                                                      style="color: rgb(255, 255, 255);">
+                                            <span class="tag-desc" set-lan="html:china"></span>
+                                        </span>
+                                    </div>
+                                    <div class="ivu-tag ivu-tag-checked"
+                                         style="background: rgb(153, 153, 153); border-width: 1px; border-style: solid; border-color: rgb(153, 153, 153); color: rgb(255, 255, 255);">
+                                        <span class="ivu-tag-text ivu-tag-color-white"
+                                                      style="color: rgb(255, 255, 255);">
+                                            <span class="tag-desc" set-lan="html:CNY"></span>
+                                        </span>
+                                    </div>
+                                    <div class="ivu-tag ivu-tag-checked"
+                                         style="background: rgb(153, 153, 153); border-width: 1px; border-style: solid; border-color: rgb(153, 153, 153); color: rgb(255, 255, 255);">
+                                        <span class="ivu-tag-text ivu-tag-color-white"
+                                                      style="color: rgb(255, 255, 255);">
+                                            <span class="tag-desc" set-lan="html:all_payments"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <i class="iconfont icon-filter"></i>
+                            </div>
+                            <div class="menu-wrapper comm-search fade-in autoWidth" style="display: none;">
+                                <div class="triangle-box">
+                                    <span class="triangle"></span>
+                                    <span class="triangle box-shadow"></span>
+                                </div>
+                                <form autocomplete="off" class="menu-form ivu-form ivu-form-label-left">
+                                    <div class="ivu-form-item">
+                                        <label class="ivu-form-item-label" style="width: 120px;">國家</label>
+                                        <div class="ivu-form-item-content" style="margin-left: 120px;">
+                                            <div class="ivu-select ivu-select-single ivu-select-default">
+                                                <div tabindex="0" class="ivu-select-selection">
+                                                    <input type="hidden" value="37">
+                                                    <div>
+                                                        <span class="ivu-select-selected-value">中国</span>
+                                                        <i class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ivu-select-dropdown" style="display: none;">
+                                                    <ul class="ivu-select-not-found" style="display: none;">
+                                                        <li>無匹配資料</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-dropdown-list">
+                                                        <li class="ivu-select-item">全部国家</li>
+                                                        <li class="ivu-select-item ivu-select-item-selected">中国</li>
+                                                        <li class="ivu-select-item">美国</li>
+                                                        <li class="ivu-select-item">韩国</li>
+                                                        <li class="ivu-select-item">中国台湾</li>
+                                                        <li class="ivu-select-item">英国</li>
+                                                        <li class="ivu-select-item">中国香港</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-loading" style="display: none;">加載中</ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ivu-form-item"><label class="ivu-form-item-label" style="width: 120px;">法幣幣種</label>
+
+                                        <div class="ivu-form-item-content" style="margin-left: 120px;">
+                                            <div class="ivu-select ivu-select-single ivu-select-default">
+                                                <div tabindex="0" class="ivu-select-selection">
+                                                    <input type="hidden" value="1">
+                                                    <div>
+                                                        <span class="ivu-select-selected-value">人民幣</span>
+                                                        <i class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ivu-select-dropdown" style="display: none;">
+                                                    <ul class="ivu-select-not-found" style="display: none;">
+                                                        <li>無匹配資料</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-dropdown-list">
+                                                        <li class="ivu-select-item ivu-select-item-selected">人民幣</li>
+                                                        <li class="ivu-select-item">美元</li>
+                                                        <li class="ivu-select-item">韓元</li>
+                                                        <li class="ivu-select-item">港元</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-loading" style="display: none;">加載中</ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ivu-form-item">
+                                        <label class="ivu-form-item-label" style="width: 120px;">支付方式</label>
+                                        <div class="ivu-form-item-content" style="margin-left: 120px;">
+                                            <div class="ivu-select ivu-select-single ivu-select-default">
+                                                <div tabindex="-1" class="ivu-select-selection">
+                                                    <input type="hidden" value="0">
+                                                    <div>
+                                                        <span class="" style="display: none;"></span>
+                                                        <input
+                                                            type="text" placeholder="" autocomplete="off"
+                                                            spellcheck="false" class="ivu-select-input">
+                                                        <i class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="ivu-select-dropdown" style="display: none;">
+                                                    <ul class="ivu-select-not-found" style="display: none;">
+                                                        <li>無匹配資料</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-dropdown-list">
+                                                        <li class="ivu-select-item ivu-select-item-selected">全部支付方式</li>
+                                                        <li class="ivu-select-item">銀行卡</li>
+                                                        <li class="ivu-select-item">支付寶</li>
+                                                        <li class="ivu-select-item">微信支付</li>
+                                                        <li class="ivu-select-item">PayPal</li>
+                                                    </ul>
+                                                    <ul class="ivu-select-loading" style="display: none;">加載中</ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ivu-form-item">
+                                        <label class="ivu-form-item-label" style="width: 120px;">金額</label>
+                                        <div class="ivu-form-item-content" style="margin-left: 120px;">
+                                            <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                                <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                <input autocomplete="off" spellcheck="false" type="text" placeholder="請輸入交易金額" class="ivu-input ivu-input-default">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="menu-line"></div>
+                                <div class="control">
+                                    <p class="font14 font-blue">
+                                    </p>
+                                    <div>
+                                        <button type="button" class="ivu-btn ivu-btn-text">
+                                            <span>取消</span>
+                                        </button>
+                                        <button type="button" class="ivu-btn ivu-btn-primary">
+                                            <span>搜索</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trade-content">
+                        <div class="table-list font14 font-gray">
+                            <span class="user" set-lan="html:merchant"></span>
+                            <span class="user credit" set-lan="html:available"></span>
+                            <span class="user limit" set-lan="html:limits"></span>
+                            <span class="user price" set-lan="html:price"></span>
+                            <div class="user operation">
+                                <p class="spec">
+                                    <span class="payways" set-lan="html:payment_method"></span><span set-lan="html:control"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="trade-list-box" style="display: none;">
+                            <div data-v-49906772="" class="loading-box-otc">
+                                <i data-v-49906772=""
+                                   class="icons-loading ivu-icon ivu-icon-load-d"
+                                   style="font-size: 32px; color: rgb(51, 51, 51);"></i>
+                            </div>
+                        </div>
+                        <div data-v-cb68475e="" class="otc-trade-list" style="">
+                            <div data-v-cb68475e="" class="trade-list">
+                                <div data-v-cb68475e="" class="trade-list-in">
+                                    <div data-v-cb68475e="" class="user-list average">
+                                        <div data-v-cb68475e="" class="avatar-container middle nine">
+                                            <em class="name">C</em>
+                                            <div class="online-icon"><p class=""></p></div>
+                                        </div>
+                                    </div>
+                                    <div data-v-cb68475e="" class="info-wrapper">
+                                        <div data-v-cb68475e="" class="name width20 spe-width"><a data-v-cb68475e=""
+                                                                                                  href="/en-us/checkUser/?id=13767519"
+                                                                                                  class=""><span
+                                                data-v-cb68475e=""><strong data-v-cb68475e="">cc西兮&nbsp;(9289 |
+                                            99%)</strong> <div data-v-cb68475e="" class="icon-tips-hover ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><i data-v-cb68475e=""
+                                                                            class="merchant-level merchant-level3"></i>
+                                            </div>
+                                            <div class="ivu-tooltip-popper"
+                                                 style="display: none; position: absolute; will-change: top, left; top: 2px; left: 140px;"
+                                                 x-placement="top">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner" set-lan="html:premium_merchant"></div>
+                                                </div>
+                                            </div>
+                                        </div></span></a></div>
+                                        <div data-v-cb68475e="" class="stars width20 average spe-width18">
+                                            13.000000
+                                            BTC
+                                        </div>
+                                        <div data-v-cb68475e="" class="amount width20 average">2,000-200,000 CNY
+                                        </div>
+                                        <div data-v-cb68475e="" class="price average">44,829.00 CNY</div>
+                                        <div data-v-cb68475e="" class="operation average">
+                                            <div data-v-cb68475e="" class="way">
+                                                <div data-v-cb68475e="" class="icon-hover ivu-tooltip">
+                                                    <div class="ivu-tooltip-rel">
+                                                        <div data-v-cb68475e=""><img data-v-cb68475e=""
+                                                                                     src="https://file.eiijo.cn/common/images/pay-icon/en-bank.svg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper"
+                                                         style="display: none; position: absolute; will-change: top, left; top: 25px; left: 906px;"
+                                                         x-placement="top">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">Bank Account</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-cb68475e="" class="icon-hover ivu-tooltip">
+                                                    <div class="ivu-tooltip-rel">
+                                                        <div data-v-cb68475e=""><img data-v-cb68475e=""
+                                                                                     src="https://file.eiijo.cn/common/images/pay-icon/alipay.svg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper"
+                                                         style="display: none; position: absolute; will-change: top, left; top: 25px; left: 953px;"
+                                                         x-placement="top">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">Alipay</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-v-cb68475e="" class="trade-btn-control">
+                                                <div data-v-cb68475e="">
+                                                    <div data-v-e5ba1b10="" data-v-cb68475e=""
+                                                         class="otc-btn-container">
+                                                        <button data-v-e5ba1b10="" class="btn-loading">
+                                                            <span set-lan="html:buy">Buy</span> <span>BTC</span>
+                                                            <div data-v-e5ba1b10="" class="icon-container"
+                                                                 style="display: none;"><i data-v-e5ba1b10=""
+                                                                                           class="loading-icon ivu-icon ivu-icon-load-c"></i>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-cb68475e="" class="m-trade-list">
+                                <div data-v-cb68475e="" class="trade-list-in">
+                                    <div data-v-cb68475e="" class="trade-avatar">
+                                        <div data-v-cb68475e="" class="avatar-container middle nine"><em
+                                                class="name">C</em>
+
+                                            <div class="online-icon"><p class=""></p></div>
+                                        </div>
+                                        <a data-v-cb68475e="" href="/en-us/checkUser/?id=13767519" class=""
+                                           rel="noopener noreferrer"><span data-v-cb68475e="" class="username"><span
+                                                data-v-cb68475e="">cc西兮&nbsp;(9289 | 99%)</span> <i data-v-cb68475e=""
+                                                                                                    class="merchant-level merchant-level3"></i></span></a>
+                                    </div>
+                                    <div data-v-cb68475e="" class="list"><span data-v-cb68475e="" class="price">Available：</span>
+
+                                        <p data-v-cb68475e="" class="spe-price">
+                                            13.000000
+                                            BTC
+                                        </p></div>
+                                    <p data-v-cb68475e="" class="list"><span data-v-cb68475e=""
+                                                                             class="price">Limits：</span> <span
+                                            data-v-cb68475e="" class="spe-price">2,000-200,000 CNY</span></p>
+
+                                    <p data-v-cb68475e="" class="list"><span data-v-cb68475e=""
+                                                                             class="price">Price：</span> <span
+                                            data-v-cb68475e="" class="price-amount">44,829.00 CNY</span></p>
+
+                                    <div data-v-cb68475e="" class="pay-box">
+                                        <div data-v-cb68475e="" class="icon"><img data-v-cb68475e=""
+                                                                                  src="https://file.eiijo.cn/common/images/pay-icon/en-bank.svg"><img
+                                                data-v-cb68475e=""
+                                                src="https://file.eiijo.cn/common/images/pay-icon/alipay.svg"></div>
+                                        <div data-v-cb68475e="" class="m-trade-control"><span data-v-cb68475e=""><div
+                                                data-v-e5ba1b10="" data-v-cb68475e="" class="otc-btn-container">
+                                            <button data-v-e5ba1b10="" class="btn-loading">
+                                                Buy BTC
+                                                <div data-v-e5ba1b10="" class="icon-container" style="display: none;"><i
+                                                        data-v-e5ba1b10=""
+                                                        class="loading-icon ivu-icon ivu-icon-load-c"></i></div>
+                                            </button>
+                                        </div></span></div>
+                                    </div> <!----></div> <!----></div>
+                        </div>
+                        <div data-v-5df9a2b7="" class="otc-trade-list" modifytradeitemid="1">
+                            <div data-v-5df9a2b7="" class="trade-list">
+                                <div data-v-5df9a2b7="" class="trade-list-in">
+                                    <div data-v-5df9a2b7="" class="user-list average">
+                                        <div data-v-5df9a2b7="" class="avatar-container middle six"><em
+                                                class="name">喜</em>
+
+                                            <div class="online-icon"><p class="online-status"></p></div>
+                                        </div>
+                                    </div>
+                                    <div data-v-5df9a2b7="" class="info-wrapper">
+                                        <div data-v-5df9a2b7="" class="name width20 spe-width"><a data-v-5df9a2b7=""
+                                                                                                  href="/zh-cn/trader/54653876"
+                                                                                                  class=""><span
+                                                data-v-5df9a2b7=""><strong data-v-5df9a2b7="">喜车郎&nbsp;(646 |
+                                            99%)</strong> <div data-v-5df9a2b7="" class="icon-tips-hover ivu-tooltip">
+                                            <div class="ivu-tooltip-rel"><i data-v-5df9a2b7=""
+                                                                            class="merchant-level merchant-level2"></i>
+                                            </div>
+                                            <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                 style="display: none; position: absolute; will-change: top, left; top: 19px; left: 130px;"
+                                                 x-placement="bottom">
+                                                <div class="ivu-tooltip-content">
+                                                    <div class="ivu-tooltip-arrow"></div>
+                                                    <div class="ivu-tooltip-inner" set-lan="html:verified_merchant">认证商家</div>
+                                                </div>
+                                            </div>
+                                        </div></span></a></div>
+                                        <div data-v-5df9a2b7="" class="stars width20 average spe-width18">
+                                            0.879820
+                                            BTC
+                                        </div>
+                                        <div data-v-5df9a2b7="" class="amount width20 average">1,000-38,800 CNY
+                                        </div>
+                                        <div data-v-5df9a2b7="" class="price average">44,100.00 CNY</div>
+                                        <div data-v-5df9a2b7="" class="operation average">
+                                            <div data-v-5df9a2b7="" class="way">
+                                                <div data-v-5df9a2b7="" class="icon-hover ivu-tooltip">
+                                                    <div class="ivu-tooltip-rel">
+                                                        <div data-v-5df9a2b7=""><img data-v-5df9a2b7=""
+                                                                                     src="https://file.eiijo.cn/common/images/pay-icon/zh-bank.svg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                         style="display: none; position: absolute; will-change: top, left; top: 56px; left: 890px;"
+                                                         x-placement="bottom">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">银行卡</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5df9a2b7="" class="icon-hover ivu-tooltip">
+                                                    <div class="ivu-tooltip-rel">
+                                                        <div data-v-5df9a2b7=""><img data-v-5df9a2b7=""
+                                                                                     src="https://file.eiijo.cn/common/images/pay-icon/alipay.svg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                         style="display: none; position: absolute; will-change: top, left; top: 56px; left: 921px;"
+                                                         x-placement="bottom">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">支付宝</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-5df9a2b7="" class="icon-hover ivu-tooltip">
+                                                    <div class="ivu-tooltip-rel">
+                                                        <div data-v-5df9a2b7=""><img data-v-5df9a2b7=""
+                                                                                     src="https://file.eiijo.cn/common/images/pay-icon/wechat.svg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ivu-tooltip-popper ivu-tooltip-dark"
+                                                         style="display: none; position: absolute; will-change: top, left; top: 56px; left: 952px;"
+                                                         x-placement="bottom">
+                                                        <div class="ivu-tooltip-content">
+                                                            <div class="ivu-tooltip-arrow"></div>
+                                                            <div class="ivu-tooltip-inner">微信</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-v-5df9a2b7="" class="limit-box"><span data-v-5df9a2b7="">
+                                                <label set-lan="html:need_to"></label>&nbsp;<a
+                                                    target="_blank" rel="noopener noreferrer" class="text-desc"
+                                                    style="color: #638BD4" href="/web/user/center/" set-lan="html:adv_verification"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-5df9a2b7="" class="m-trade-list">
+                                <div data-v-5df9a2b7="" class="trade-list-in">
+                                    <div data-v-5df9a2b7="" class="trade-avatar">
+                                        <div data-v-5df9a2b7="" class="avatar-container middle six">
+                                            <em class="name">喜</em>
+                                            <div class="online-icon"><p class="online-status"></p></div>
+                                        </div>
+                                        <a data-v-5df9a2b7="" href="/zh-cn/trader/54653876" class=""
+                                           rel="noopener noreferrer"><span data-v-5df9a2b7="" class="username"><span
+                                                data-v-5df9a2b7="">喜车郎&nbsp;(646 | 99%)</span>
+                                            <i data-v-5df9a2b7="" class="merchant-level merchant-level2"></i></span></a>
+                                    </div>
+                                    <div data-v-5df9a2b7="" class="list"><span data-v-5df9a2b7=""
+                                                                               class="price">数量：</span>
+
+                                        <p data-v-5df9a2b7="" class="spe-price">
+                                            0.879820
+                                            BTC
+                                        </p></div>
+                                    <p data-v-5df9a2b7="" class="list"><span data-v-5df9a2b7="" class="price">限额：</span>
+                                        <span data-v-5df9a2b7="" class="spe-price">1,000-38,800 CNY</span></p>
+
+                                    <p data-v-5df9a2b7="" class="list"><span data-v-5df9a2b7="" class="price">单价：</span>
+                                        <span data-v-5df9a2b7="" class="price-amount">44,100.00 CNY</span></p>
+
+                                    <div data-v-5df9a2b7="" class="pay-box">
+                                        <div data-v-5df9a2b7="" class="icon"><img data-v-5df9a2b7=""
+                                                                                  src="https://file.eiijo.cn/common/images/pay-icon/zh-bank.svg"><img
+                                                data-v-5df9a2b7=""
+                                                src="https://file.eiijo.cn/common/images/pay-icon/alipay.svg"></div>
+                                        <div data-v-5df9a2b7="" class="m-trade-control" style="display: none;"><span
+                                                data-v-5df9a2b7=""><div data-v-0b21085c="" data-v-5df9a2b7=""
+                                                                        class="otc-btn-container">
+                                            <button data-v-0b21085c="" class="btn-loading">
+                                                购买BTC
+                                                <div data-v-0b21085c="" class="icon-container" style="display: none;"><i
+                                                        data-v-0b21085c=""
+                                                        class="loading-icon ivu-icon ivu-icon-ios-loading"></i></div>
+                                            </button>
+                                        </div></span></div>
+                                    </div>
+                                    <div data-v-5df9a2b7="" class="trade-limit"><span data-v-5df9a2b7="">购买需&nbsp;<a
+                                            target="_blank" rel="noopener noreferrer" class="text-desc"
+                                            style="color: #638BD4" href="/web/user/center/">高级认证</a></span></div>
+                                </div> <!----></div> <!----> <!----> <!----> <!----></div>
+                        <div data-v-cb68475e="" class="otc-trade-list" style="">
+                            <div data-v-cb68475e="" class="trade-list">
+                                <div data-v-5df9a2b7="" class="trading-box">
+                                    <div data-v-5df9a2b7="" class="trading">
+                                        <div data-v-5df9a2b7="" class="trade-avatar">
+                                            <div data-v-5df9a2b7="" class="avatar-container middle zero">
+                                                <em class="name">C</em>
+                                                <div class="online-icon"><p class="online-status"></p></div>
+                                            </div>
+                                            <div data-v-5df9a2b7="" class="avatar-desc"><span data-v-5df9a2b7=""
+                                                                                              class="user-name">
+                            CC萌萌&nbsp;(1618 | 98%)
+                            <i data-v-5df9a2b7="" class="merchant-level merchant-level2"></i></span>
+
+                                                <div data-v-5df9a2b7="" class="prestige">
+                                                    <span set-lan="html:available"></span> 0.684515 BTC
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-5df9a2b7="" class="price-desc" style="display: none;"><p
+                                                data-v-5df9a2b7="" class="no-weight">0.00&nbsp;CNY</p>
+
+                                            <p data-v-5df9a2b7="" class="prices">0-0&nbsp;CNY</p></div>
+                                        <div data-v-5df9a2b7="" class="error-tip">
+                                            <span data-v-5df9a2b7="" class="tip-cancel" set-lan="html:cancel"></span>
+                                            <span data-v-5df9a2b7="" set-lan="html:complete_info">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-cb68475e="" class="m-trade-list">
+                                <div data-v-cb68475e="" class="trade-list-in">
+                                    <div data-v-cb68475e="" class="trade-avatar">
+                                        <div data-v-cb68475e="" class="avatar-container middle nine"><em
+                                                class="name">C</em>
+
+                                            <div class="online-icon"><p class=""></p></div>
+                                        </div>
+                                        <a data-v-cb68475e="" href="/en-us/checkUser/?id=13767519" class=""
+                                           rel="noopener noreferrer"><span data-v-cb68475e="" class="username"><span
+                                                data-v-cb68475e="">cc西兮&nbsp;(9289 | 99%)</span> <i data-v-cb68475e=""
+                                                                                                    class="merchant-level merchant-level3"></i></span></a>
+                                    </div>
+                                    <div data-v-cb68475e="" class="list"><span data-v-cb68475e="" class="price">Available：</span>
+
+                                        <p data-v-cb68475e="" class="spe-price">
+                                            13.000000
+                                            BTC
+                                        </p></div>
+                                    <p data-v-cb68475e="" class="list"><span data-v-cb68475e=""
+                                                                             class="price">Limits：</span> <span
+                                            data-v-cb68475e="" class="spe-price">2,000-200,000 CNY</span></p>
+
+                                    <p data-v-cb68475e="" class="list"><span data-v-cb68475e=""
+                                                                             class="price">Price：</span> <span
+                                            data-v-cb68475e="" class="price-amount">44,829.00 CNY</span></p>
+
+                                    <div data-v-cb68475e="" class="pay-box">
+                                        <div data-v-cb68475e="" class="icon"><img data-v-cb68475e=""
+                                                                                  src="https://file.eiijo.cn/common/images/pay-icon/en-bank.svg"><img
+                                                data-v-cb68475e=""
+                                                src="https://file.eiijo.cn/common/images/pay-icon/alipay.svg"></div>
+                                        <div data-v-cb68475e="" class="m-trade-control"><span data-v-cb68475e=""><div
+                                                data-v-e5ba1b10="" data-v-cb68475e="" class="otc-btn-container">
+                                            <button data-v-e5ba1b10="" class="btn-loading">
+                                                Buy BTC
+                                                <div data-v-e5ba1b10="" class="icon-container" style="display: none;"><i
+                                                        data-v-e5ba1b10=""
+                                                        class="loading-icon ivu-icon ivu-icon-load-c"></i></div>
+                                            </button>
+                                        </div></span></div>
+                                    </div> <!----></div> <!----></div>
+                        </div>
+
+                        <div style=""><!---->
+                            <div class="pages">
+                                <ul class="ivu-page"><!---->
+                                    <li title="Previous Page" class="ivu-page-prev ivu-page-disabled"><a><i
+                                            class="ivu-icon ivu-icon-ios-arrow-left"></i></a></li>
+                                    <li title="1" class="ivu-page-item ivu-page-item-active"><a>1</a></li> <!---->
+                                    <!----> <!----> <!---->
+                                    <li title="2" class="ivu-page-item"><a>2</a></li>
+                                    <li title="3" class="ivu-page-item"><a>3</a></li>
+                                    <li title="Next 5 Pages" class="ivu-page-item-jump-next"><a><i
+                                            class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li>
+                                    <li title="7" class="ivu-page-item"><a>7</a></li>
+                                    <li title="Next Page" class="ivu-page-next"><a><i
+                                            class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li> <!----></ul> <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!----> <!----></div>
+        {include file="/common/footer" /}
+        {include file="/common/dialog" /}
+    </div>
+    <div data-v-d20f0338="" class="app-download h5-download">
+        <div class="app-download-box">
+            <div class="close-box">
+                <div><i class="ivu-icon ivu-icon-close-circled"></i></div>
+            </div>
+            <div class="desc-box"><img src="https://file.eiijo.cn/vue/v3/v3.2.6/static/img/app-icon.40100b0.svg">
+
+                <div class="app-desc-box"><p class="title">Huobi OTC</p>
+
+                    <p>Digital Asset Over-the-counter platform</p>
+
+                    <p class="star-box"><i class="ivu-icon ivu-icon-star"></i> <i class="ivu-icon ivu-icon-star"></i> <i
+                            class="ivu-icon ivu-icon-star"></i> <i class="ivu-icon ivu-icon-star"></i> <i
+                            class="ivu-icon ivu-icon-star"></i></p></div>
+            </div>
+            <div class="button-box"><a href="/en-us/client/" class="a-d-outside">Download</a></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/Web/script/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/Web/script/commons.js"></script>
+<script type="text/javascript" src="/Web/script/header.js"></script>
+</html>

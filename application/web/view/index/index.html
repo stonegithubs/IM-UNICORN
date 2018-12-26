@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" class="en-us hb-night" page-name="index">
+<head>
+    <meta charset="UTF-8">
+    <meta name="360-site-verification" content="f7a8968e0200a5c10a390b5a7918c166">
+    <meta name="sogou_site_verification" content="nfoQiiwTzQ">
+    <meta name="shenma-site-verification" content="460a87e49af789d79a1fc772264a9f43_1533869395">
+    <title></title>
+    <meta name="keywords" content="”Huobi,Huobi Pro,Huobi Global“/">
+    <meta name="description"
+          content="Founded in 2013, Huobi is the world's leading digital asset trading platform and currently offers trading and investment in more than 100 digital asset pairs. Huobi exchange includes OTC (fiat-crypto exchange), crypto-crypto exchange, HADAX innovative digital currency and margin trading.">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="/Web/styles/index.css" rel="stylesheet">
+    <link href="/Web/styles/home.css" rel="stylesheet">
+    <script type="text/javascript" src="/Web/script/loadpage.js"></script>
+</head>
+<body class="user_not_login">
+<div class="layout_doc" id="index">
+    <div class="layout_body">
+        <div class="home_header">
+            {include file="/common/header" /}
+        </div>
+        <div class="page_index">
+            <div class="banner" id="banner_wrap">
+                <div class="banner_slide" id="banner_slide">
+                    <div class="slide_in show"
+                         style="background-image: url('/Web/image/slide/b6e9b3d1-063e-470e-94b7-bd88fd669d3c.jpg');">
+                        <a href="javascript:void(0);" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="banner_legend" id="banner_legend">
+                    <a data-index="0" class="cur"><i></i></a>
+                    <a data-index="1" class=""><i></i></a>
+                </div>
+            </div>
+
+            <div class="notice_box">
+                <div id="notice_top_box" class="notice_list" style="display: none;">
+                <span v-for="notice in notices"><a target="_blank" rel="noopener noreferrer" :href="notice.url" >{{ notice.title }}</a></span>
+                </div>
+            </div>
+
+            <div class="ticker_wrap">
+                <ul class="market_ticker" id="market_ticker" data-ee="marketTicker" style="display: none;">
+                    <li v-for="market in markets">
+                        <a href="javascript:void(0);" :data-s="market.symbol"></a>
+                        <div class="symbol_line">
+                            <span :class="market.increaseStr">{{ market.increase }}%</span>
+                            <span class="symbol">{{ market.baseCurrency }}/{{ market.quoteCurrency }}</span>
+                        </div>
+                        <p class="now">
+                            {{ market.newPrice }}
+                            <span :class="market.upgadStr">{{ market.upgad }}</span>
+                        </p>
+                        <p class="estimate">≈ {{ market.calcAmount }} cny</p>
+                        <div class="amount">
+                            <span>24H量 <em>{{ market.qty }}</em></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="client_wrap">
+                <div class="wrap_in">
+                    <h3 set-lan="html:client_wrap_h3"></h3>
+                    <p set-lan="html:client_wrap_p"></p>
+                    <div class="wrap_bg">
+                        <div class="download_app">
+                            <a class="app_ios_en app_white" id="iphone_link" href="javascript:void(0);">IPhone</a>
+                            <a class="app_android" id="android_link" href="javascript:void(0);">Android</a>
+                            <a class="app_window" id="windows_link" href="javascript:void(0);">Windows</a>
+                            <a class="app_mac" id="mac_link" href="javascript:void(0);">Mac</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trade_wrap" id="trade_btn">
+                <h3 set-lan="html:trade_wrap_h3"></h3>
+                <p set-lan="html:trade_wrap_p"></p>
+                <div class="btn_group">
+                    <a href="/web/index/login/" class="btn-login logout btn-home" set-lan="html:trade_wrap_login"></a>
+                    <a href="/web/index/register/" class="btn-regist logout btn-home" set-lan="html:trade_wrap_reg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="/common/footer" /}
+{include file="/common/dialog" /}
+</body>
+<script type="text/javascript" src="/Web/script/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/Web/script/commons.js"></script>
+<script type="text/javascript" src="/Web/script/header.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--<script type="text/javascript" src="/Web/script/socket.io.js"></script>-->
+<script type="text/javascript" src="/Web/script/pako/1.0.6/pako.min.js"></script>
+<script type="text/javascript" src="/Web/script/index.js"></script>
+</html>

@@ -1,0 +1,685 @@
+<style>
+    .send-validate {
+        position: absolute;
+        right: 14px;
+        top: 1px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<!--提示信息 开始-->
+<!--notice 开始-->
+<div class="ivu-notice" style="top: 64px; right: 0px; z-index: 1024;">
+    <div class="ivu-notice-notice ivu-notice-notice-closable ivu-notice-notice-with-desc" style="display: none;">
+        <div class="ivu-notice-notice-content">
+            <div class="ivu-notice-custom-content ivu-notice-with-icon ivu-notice-with-warning  ivu-notice-with-desc">
+                <span class="ivu-notice-icon ivu-notice-icon-warning">
+                    <i class="ivu-icon ivu-icon-ios-alert-outline"></i>
+                </span>
+
+                <div class="ivu-notice-title">温馨提示</div>
+                <div class="ivu-notice-desc">请先完成实名认证。</div>
+            </div>
+        </div>
+        <div class="ivu-notice-content-with-icon"></div>
+        <a class="ivu-notice-notice-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+    </div>
+</div>
+<!--notice 结束-->
+<!--提示信息 结束-->
+
+<!--设置昵称和资金密码 开始-->
+<!--Set nicknames and fund passwords.Start-->
+<div data-v-699fe22d="" data-transfer="true" class="modal-in nick-name v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1004;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1004;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content">
+                <div class="ivu-modal-header">
+                    <div data-v-699fe22d="" class="modal-header"><p data-v-699fe22d="" class="title" set-lan="html:nickname_header_title"> </p>
+                        <p data-v-699fe22d="" class="modal-desc" set-lan="html:nickname_header_desc"></p></div>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-699fe22d="" class="modal-content">
+                        <form data-v-699fe22d="" autocomplete="off" class="ivu-form ivu-form-label-top">
+                            <div data-v-699fe22d="" class="ivu-form-item ivu-form-item-error"><label class="ivu-form-item-label" set-lan="html:nickname"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-699fe22d="" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               set-lan="placeholder:change_nickname"
+                                               class="ivu-input ivu-input-large">
+                                    </div>
+                                    <div class="ivu-form-item-error-tip">请输入您的昵称</div>
+                                </div>
+                            </div>
+                            <div data-v-699fe22d="" class="items ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:trade_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-699fe22d="" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                               set-lan="placeholder:change_pass"
+                                               class="ivu-input ivu-input-large">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-699fe22d="" class="items ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:c_trade_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-699fe22d="" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password"
+                                               set-lan="placeholder:change_c_pass"
+                                               class="ivu-input ivu-input-large">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-699fe22d="" class="modal-footer">
+                        <button data-v-699fe22d="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Set nicknames and fund passwords.End-->
+<!--设置昵称和资金密码 结束-->
+
+<!--重置资金密码 开始-->
+<!--Reset password.Start-->
+<div data-v-77d61106="" data-transfer="true" class="modal-in reset-pwd v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1005;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1005;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content"><!---->
+                <div class="ivu-modal-header">
+                    <p data-v-77d61106="" class="modal-header">
+                        <span set-lan="html:reset_pwd"></span>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                    </p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-77d61106="" class="modal-content">
+                        <form data-v-77d61106="" autocomplete="off" class="form-control ivu-form ivu-form-label-top">
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:new_trade_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:c_trade_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control send ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:phone_code"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control hover-input ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder="" maxlength="6" class="ivu-input ivu-input-default">
+                                    </div>
+                                    <button data-v-77d61106="" class="send-validate font-gray" set-lan="html:send_code"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-77d61106="" class="modal-footer"><span data-v-77d61106="" type="primary" class="cancel" set-lan="html:cancel"></span>
+                        <button data-v-77d61106="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Reset password.End-->
+<!--重置资金密码 结束-->
+
+<!--实名认证 开始-->
+<!--Real name authentication.Start-->
+<div data-v-11e4735e="" data-transfer="true" class="modal-in real-verify v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1007;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1007;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content"><!---->
+                <div class="ivu-modal-header">
+                    <div data-v-11e4735e="" class="modal-header">
+                        <p data-v-11e4735e="" class="title" set-lan="html:real_verify">实名认证</p>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                        <p data-v-11e4735e="" class="modal-desc" set-lan="html:real_verify_desc"></p>
+                    </div>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-11e4735e="" class="modal-content">
+                        <div data-v-11e4735e="">
+                            <form data-v-11e4735e="" autocomplete="off"
+                                  class="form-control ivu-form ivu-form-label-top">
+                                <div data-v-11e4735e="" class="item-control ivu-form-item">
+                                    <label class="ivu-form-item-label" set-lan="html:country"></label>
+                                    <div class="ivu-form-item-content">
+                                        <div data-v-11e4735e=""
+                                             class="input-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type"
+                                             style="color: rgb(51, 51, 51);">
+                                            <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                            <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                                   disabled="disabled"
+                                                   class="ivu-input ivu-input-default ivu-input-disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-11e4735e="">
+                                    <div data-v-11e4735e="" class="item-control ivu-form-item">
+                                        <label class="ivu-form-item-label" set-lan="html:name"></label>
+                                        <div class="ivu-form-item-content">
+                                            <div data-v-11e4735e=""
+                                                 class="input-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                                <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                                       class="ivu-input ivu-input-default">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-v-11e4735e="" class="item-control ivu-form-item">
+                                        <label class="ivu-form-item-label" set-lan="html:ID_number"></label>
+                                        <div class="ivu-form-item-content">
+                                            <div data-v-11e4735e=""
+                                                 class="input-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                                <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                <input autocomplete="off" spellcheck="false" type="text" placeholder=""
+                                                       class="ivu-input ivu-input-default">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div data-v-11e4735e="" class="loading-box" style="display: none;">
+                            <div class="demo-spin-col ivu-col ivu-col-span-8">
+                                <div class="ivu-spin ivu-spin-default ivu-spin-fix ivu-spin-show-text">
+                                    <div class="ivu-spin-main"><span class="ivu-spin-dot"></span>
+
+                                        <div class="ivu-spin-text">
+                                            <div class="loader">
+                                                <svg viewBox="25 25 50 50" class="circular">
+                                                    <circle class="path" cx="50" cy="50" r="20" fill="none"
+                                                            stroke-width="5" stroke-miterlimit="10"></circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-11e4735e="" class="modal-footer">
+                        <span data-v-11e4735e="" type="primary" class="cancel" set-lan="html:cancel"></span>
+                        <button data-v-11e4735e="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Real name authentication.End-->
+<!--实名认证 结束-->
+
+
+<!--绑定邮箱 开始-->
+<!--Bind_email.Start-->
+<div data-v-77d61106="" data-transfer="true" class="modal-in bind-email v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1005;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1005;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content"><!---->
+                <div class="ivu-modal-header">
+                    <p data-v-77d61106="" class="modal-header">
+                        <span set-lan="html:bind_email"></span>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                    </p>
+                    <p data-v-11e4735e="" class="modal-desc" set-lan="html:bind_email_desc"></p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-77d61106="" class="modal-content">
+                        <form data-v-77d61106="" autocomplete="off" class="form-control ivu-form ivu-form-label-top">
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:email">邮箱</label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control send ivu-form-item">
+                                <label class="ivu-form-item-label" style="display: block;text-align: left;">
+                                    <span set-lan="html:email_code"></span>
+                                    <em style="float: right;" set-lan="html:email_code_em"></em>
+                                </label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control hover-input ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder="" maxlength="6" class="ivu-input ivu-input-default">
+                                    </div>
+                                    <button data-v-77d61106="" class="send-validate font-gray" set-lan="html:send_code"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-77d61106="" class="modal-footer">
+                        <span data-v-77d61106="" type="primary" class="cancel" set-lan="html:cancel">取消</span>
+                        <button data-v-77d61106="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm">确定</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Bind_email.End-->
+<!--绑定邮箱 结束-->
+
+<!--修改登录密码 开始-->
+<!--Modify login password.Start-->
+<div data-v-77d61106="" data-transfer="true" class="modal-in modify-login-pass v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1005;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1005;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content">
+                <div class="ivu-modal-header">
+                    <p data-v-77d61106="" class="modal-header">
+                        <span set-lan="html:modify_login_pass"></span>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                    </p>
+                    <p data-v-11e4735e="" class="modal-desc" set-lan="html:modify_login_pass_desc"></p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-77d61106="" class="modal-content">
+                        <form data-v-77d61106="" autocomplete="off" class="form-control ivu-form ivu-form-label-top">
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:old_login_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:new_login_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:c_login_pass"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-77d61106="" class="item-control send ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:phone_code"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control hover-input ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder="" maxlength="6" class="ivu-input ivu-input-default">
+                                    </div>
+                                    <button data-v-77d61106="" class="send-validate font-gray" set-lan="html:send_code"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-77d61106="" class="modal-footer"><span data-v-77d61106="" type="primary" class="cancel" set-lan="html:cancel"></span>
+                        <button data-v-77d61106="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modify login password.End-->
+<!--修改登录密码 结束-->
+
+<!--修改手机 开始-->
+<!--Modify phone.Start-->
+<div data-v-77d61106="" data-transfer="true" class="modal-in modify-phone v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1005;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1005;">
+        <div class="ivu-modal" style="width: 472px; top: 20% !important;">
+            <div class="ivu-modal-content">
+                <div class="ivu-modal-header">
+                    <p data-v-77d61106="" class="modal-header">
+                        <span set-lan="html:modify_phone"></span>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                    </p>
+                    <p data-v-11e4735e="" class="modal-desc" set-lan="html:modify_phone_desc"></p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-77d61106="" class="modal-content">
+                        <form data-v-77d61106="" autocomplete="off" class="form-control ivu-form ivu-form-label-top">
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:phone_number"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="password" placeholder="" class="ivu-input ivu-input-default">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-v-77d61106="" class="item-control ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:phone_number"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <div class="input_phone">
+                                            <div class="wrap_select" id="wrap_select_country_code" style="width: 20%; float: left;">
+                                                <div tabindex="0" class="input_select size_full " style="display: inline-block;">
+                                                    <div class="select_label">
+                                                        <input name="new_country_code" disabled="disabled" style="border: currentColor; border-image: none; background-color: rgb(255, 255, 255);" type="text" data-msg-error="Input error" data-msg-null="请选择区号" data-datatype="*"> <span class="select_output" style="border: 1px solid rgb(220, 222, 226); border-image: none; height: 32px; line-height: 32px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; background-color: rgb(255, 255, 255);" data-output="output">0086</span>
+                                                    </div>
+                                                    <div class="select_option" style="display: none;">
+                                                        <p class="label" data-option-type="label">
+                                                            <span class="key">常用</span> <span class="info"></span></p>
+                                                        <p data-option-type=""><span class="key">China</span> <span class="info">0086</span>
+                                                        </p>
+                                                        <p data-option-type=""><span class="key">Hong Kong (China)</span> <span class="info">00852</span></p>
+
+                                                        <p data-option-type=""><span class="key">Taiwan (China)</span> <span class="info">00886</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input name="new_phone" class="input_text" style="border: 1px solid rgb(220, 222, 226); border-image: none; width: 80%; height: 32px; float: left; border-radius: 3px;border-top-left-radius: 0px; border-bottom-left-radius: 0px;" maxlength="11" data-msg-error="手机号码格式不正确，请重新输入" data-msg-null="请输入手机号码" data-datatype="p{5,11}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div data-v-77d61106="" class="item-control send ivu-form-item">
+                                <label class="ivu-form-item-label" set-lan="html:phone_code"></label>
+                                <div class="ivu-form-item-content">
+                                    <div data-v-77d61106="" class="input-control address-control hover-input ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text" placeholder="" maxlength="6" class="ivu-input ivu-input-default">
+                                    </div>
+                                    <button data-v-77d61106="" class="send-validate font-gray" set-lan="html:send_code"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-77d61106="" class="modal-footer"><span data-v-77d61106="" type="primary" class="cancel" set-lan="html:cancel"></span>
+                        <button data-v-77d61106="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:confirm"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modify phone.End-->
+<!--修改手机 结束-->
+
+<!--高级认证 开始-->
+<!--Advanced verify.Start-->
+<div data-v-066b9902="" data-transfer="true" class="modal-in senior-auth-container v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1033;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1033;">
+        <div class="ivu-modal" style="width: 472px; top: 10%;">
+            <div class="ivu-modal-content">
+                <div class="ivu-modal-header">
+                    <p data-v-066b9902="" class="modal-header">
+                        <span set-lan="html:advanced_verify"></span>
+                        <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                    </p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-066b9902="" class="modal-content">
+                        <p data-v-066b9902="" class="senior-desc" set-lan="html:advanced_verify_desc"></p>
+                        <div data-v-066b9902="" data-qr-width="145" data-qr-height="145" data-qr-text="loading"
+                             class="qs-box qr-code-box"
+                             title="https://api.megvii.com/faceid/lite/do?token=2ae857f3c7869136d459fd31fca2bba7">
+                            <div data-v-066b9902="" class="loading-box" style="display: none;">
+                                <div class="demo-spin-col ivu-col ivu-col-span-8">
+                                    <div class="ivu-spin ivu-spin-default ivu-spin-fix ivu-spin-show-text">
+                                        <div class="ivu-spin-main"><span class="ivu-spin-dot"></span>
+                                            <div class="ivu-spin-text">
+                                                <div class="loader">
+                                                    <svg viewBox="25 25 50 50" class="circular">
+                                                        <circle class="path" cx="50" cy="50" r="20" fill="none"
+                                                                stroke-width="5" stroke-miterlimit="10"></circle>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <canvas width="145" height="145" style="display: none;"></canvas>
+                            <img alt="Scan me!"
+                                 src="data:image/png;base64,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"
+                                 style="display: block;"></div>
+                        <p data-v-066b9902="" class="prepare" set-lan="html:advanced_verify_prepare"></p>
+                        <div data-v-066b9902="" class="code-desc">
+                            <ul data-v-066b9902="">
+                                <li data-v-066b9902="" class="first-desc" set-lan="html:first_desc">
+                                </li>
+                                <li data-v-066b9902="" set-lan="html:next_desc"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <button type="button" class="ivu-btn ivu-btn-text ivu-btn-large">
+                        <span set-lan="html:cancel"></span>
+                    </button>
+                    <button type="button" class="ivu-btn ivu-btn-primary ivu-btn-large">
+                        <span set-lan="html:confirm"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Advanced verify.End-->
+<!--高级认证 结束-->
+
+<!--添加收款方式 开始-->
+<div data-v-b786a326="" data-transfer="true" class="modal-in add-modal-in add-pay v-transfer-dom" style="display: none;">
+    <div class="ivu-modal-mask" style="z-index: 1034;"></div>
+    <div class="ivu-modal-wrap" style="z-index: 1034;">
+        <div class="ivu-modal" style="width: 472px; top: 20%;">
+            <div class="ivu-modal-content">
+                <a class="ivu-modal-close"><i class="ivu-icon ivu-icon-ios-close"></i></a>
+                <div class="ivu-modal-header">
+                    <p data-v-b786a326="" class="modal-header">
+                        <span data-v-b786a326="" set-lan="html:add_pay_type"></span>
+                        <span data-v-b786a326="" style="display: none;" set-lan="html:edit_pay"></span>
+                    </p>
+                </div>
+                <div class="ivu-modal-body">
+                    <div data-v-b786a326="" class="modal-content">
+                        <div data-v-b786a326="" class="items">
+                            <p data-v-b786a326="" class="titles">
+                                <label data-v-b786a326="" set-lan="html:payment_method"></label>
+                            </p>
+                            <div data-v-b786a326="" class="ivu-select ivu-select-single ivu-select-large">
+                                <div tabindex="0" class="ivu-select-selection">
+                                    <input type="hidden" value="">
+                                    <div>
+                                        <span class="ivu-select-placeholder" set-lan="html:choice_payment_method"></span>
+                                        <i class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i>
+                                    </div>
+                                </div>
+                                <div class="ivu-select-dropdown"
+                                     style="min-width: 424px; transform-origin: center bottom 0px; display: none;">
+                                    <ul class="ivu-select-not-found" style="display: none;">
+                                        <li set-lan="html:no_data"></li>
+                                    </ul>
+                                    <ul class="ivu-select-dropdown-list">
+                                        <li data-v-b786a326="" class="ivu-select-item" data-value="1" set-lan="html:bank_card"></li>
+                                        <li data-v-b786a326="" class="ivu-select-item" data-value="2" set-lan="html:alipay"></li>
+                                        <li data-v-b786a326="" class="ivu-select-item" data-value="3" set-lan="html:wechat"></li>
+                                        <li data-v-b786a326="" class="ivu-select-item" data-value="4" set-lan="html:paypal"></li>
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="5" set-lan="html:western_union"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="6" set-lan="html:SWIFT"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="7" set-lan="html:PayNow"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="8" set-lan="html:Paytm"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="9" set-lan="html:QIWI"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="10" set-lan="html:Interac"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="11" set-lan="html:IMPS"></li>-->
+                                        <!--<li data-v-b786a326="" class="ivu-select-item" data-value="12" set-lan="html:UPI"></li>-->
+                                    </ul>
+                                    <ul class="ivu-select-loading" style="display: none;" set-lan="html:loading"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-v-b786a326="">
+                            <div data-v-b786a326="" class="items bank_card" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="" set-lan="html:name"></label>
+                                </p>
+                                <div data-v-b786a326="" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                    <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                    <input autocomplete="off" spellcheck="false" type="text"
+                                           placeholder="请输入您的真实姓名" disabled="disabled" class="ivu-input ivu-input-large ivu-input-disabled">
+                                </div>
+                            </div>
+                            <div data-v-b786a326="" class="items bank_card" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="" set-lan="html:bank_name"></label>
+                                </p>
+                                <div data-v-b786a326="" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                    <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                    <input autocomplete="off" spellcheck="false" type="text" set-lan="placeholder:w_bank_name"
+                                           maxlength="30" class="ivu-input ivu-input-large">
+                                </div>
+                            </div>
+                            <div data-v-b786a326="" class="items bank_card" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="" set-lan="html:branch_info"></label>
+                                </p>
+                                <div data-v-b786a326=""
+                                     class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                    <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                    <input autocomplete="off" spellcheck="false" type="text" set-lan="placeholder:w_branch_info"
+                                           class="ivu-input ivu-input-large">
+                                </div>
+                            </div>
+
+
+                            <div data-v-b786a326="" class="items account" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="">
+                                        <span data-v-b786a326="">
+                                            <span data-v-b786a326="" class="account-span"></span>
+                                        </span>
+                                    </label>
+                                </p>
+                                <div data-v-b786a326="">
+                                    <div data-v-b786a326=""
+                                         class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                        <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               maxlength="50" class="ivu-input ivu-input-large">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-v-b786a326="" class="items qrcode" style="display: none;">
+                                <p data-v-b786a326="" class="titles"><label data-v-b786a326="" set-lan="html:qrcode"></label></p>
+                                <div data-v-b786a326="" class="upload-diy ivu-upload" style="margin-bottom: 20px;">
+                                    <div class="ivu-upload ivu-upload-select">
+                                        <input type="file" multiple="multiple"
+                                               accept="image/jpg,image/jpeg,image/png"
+                                               class="ivu-upload-input">
+                                        <div data-v-b786a326="" class="upload-wrapper" style="padding: 20px 0px;">
+                                            <div data-v-b786a326="">
+                                                <i data-v-b786a326=""
+                                                   class="ivu-icon ivu-icon-ios-cloud-upload"
+                                                   style="font-size: 24px; color: rgb(51, 153, 255);"></i>
+                                                <p data-v-b786a326=""></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-v-b786a326="" class="items textarea" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="" style="">
+                                        <span data-v-b786a326=""><span data-v-b786a326="">西联汇款信息</span></span>
+                                    </label>
+                                </p>
+                                <div data-v-b786a326=""
+                                     class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                                    <textarea wrap="soft" autocomplete="off" spellcheck="false" placeholder="" rows="4" class="ivu-input"></textarea>
+                                </div>
+                            </div>
+
+                            <div data-v-b786a326="" class="items ciphercode" style="display: none;">
+                                <p data-v-b786a326="" class="titles">
+                                    <label data-v-b786a326="" set-lan="html:trade_pass"></label>
+                                </p>
+                                <div data-v-b786a326=""
+                                     class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type">
+                                    <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                    <input autocomplete="off" spellcheck="false" type="password"  set-lan="placeholder:w_trade_pass"
+                                           class="ivu-input ivu-input-large">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div data-v-b786a326="" class="modal-footer">
+                        <span data-v-b786a326="" class="remove-btn" style="display: none;" set-lan="html:del_pay"></span>
+                        <span data-v-b786a326="" type="primary" class="cancel" set-lan="html:cancel"></span>
+                        <button data-v-b786a326="" type="button" class="btn ivu-btn ivu-btn-primary">
+                            <span set-lan="html:complete_setting"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--添加收款方式 结束-->
